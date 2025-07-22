@@ -1,0 +1,54 @@
+:root {
+    --main-color: #070707;
+    --black-color: rgba(0, 0, 0, 1);
+    --secondary-color: #ffffff;
+}
+
+.navbar {
+    border-radius: 100px;
+    box-shadow: 0 4px 30px var(--black-color);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 2px solid var(--black-color);
+    top: 1rem;
+    width: 50%;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.download {
+    color: var(--secondary-color);
+    background-color: var(--main-color);
+    text-decoration: none;
+    margin-right: 1rem;
+}
+
+.download:hover {
+    background-color: #202020;
+}
+
+.menu {
+    color: var(--secondary-color);
+}
+
+.menu-drop {
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+}
+
+.avatar {
+    margin-left: 1rem;
+}
+
+.burger {
+    background-color: var(--main-color);
+}
+
+.burger:hover {
+    background-color: #202020;
+}
