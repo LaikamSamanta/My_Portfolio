@@ -43,7 +43,6 @@ const clientLogos = [
 
 export default function ClientLogo7() {
   return (
-    <section className="ezy__clients7 light py-14 md:py-24 bg-white dark:bg-[#0b1727] text-zinc-900 dark:text-white">
       <div className="container px-4">
         <div className="grid grid-cols-12 justify-center mb-12">
           <div className="col-span-12 lg:col-span-6 lg:col-start-4 text-center">
@@ -75,6 +74,5 @@ export default function ClientLogo7() {
           ))}
         </div>
       </div>
-    </section>
   );
 }

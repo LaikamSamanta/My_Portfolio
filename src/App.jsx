@@ -9,12 +9,12 @@ function App() {
   return (
     <>
       <AnimatedGridPattern className="absolute inset-0 z-0" />
-      <section className="navbar-container">
+      <div className="navbar-container">
         <Navbar />
-      </section>
-      <section className="hero-section">
+      </div>
+      <div className="hero-section">
         <Hero />
-      </section>
+      </div>
       <section id="about">
         <div className="container mx-auto px-4 py-8">
           <h2 className="text-3xl font-bold mb-4">About Me</h2>
@@ -39,7 +39,7 @@ function App() {
       </section>
       <section id="contact">
         <div className="container mx-auto px-4 py-8">
-          <h2 className="text-3xl font-bold mb-4">Contact</h2>
+          <h2 className="text-3xl font-bold mb-4">Contact Me</h2>
           <Contact />
         </div>
       </section>

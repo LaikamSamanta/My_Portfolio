@@ -1,3 +1,21 @@
+* {
+  font-family: Poppins;
+}
+
 .btn {
   border-radius: 9999px;
+}
+
+body {
+  background: white;
+}
+
+section:nth-child(even) {
+  background: black;
+  color: white;
+}
+
+section:nth-child(odd) {
+  background: white;
+  color: black;
 }
