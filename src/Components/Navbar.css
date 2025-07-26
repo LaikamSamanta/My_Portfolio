@@ -18,6 +18,7 @@
     z-index: 1000;
     display: flex;
     justify-content: space-between;
+    transition: border-color 0.3s ease;
 }
 
 
@@ -26,7 +27,7 @@
     background-color: var(--main-color);
     text-decoration: none;
     margin-right: 1rem;
-    border: 1px solid white;
+    border: 1px solid var(--secondary-color);
 }
 
 .download:hover {
@@ -48,13 +49,9 @@
 
 .burger {
     background-color: var(--main-color);
-    border: 1px solid white;
+    border: 1px solid var(--secondary-color);
 }
 
 .burger:hover {
     background-color: #202020;
-}
-
-@media (width) {
-    
 }

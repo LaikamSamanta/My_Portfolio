@@ -41,7 +41,7 @@ const clientLogos = [
   },
 ];
 
-export default function ClientLogo7() {
+export default function ClientLogo() {
   return (
       <div className="container px-4">
         <div className="grid grid-cols-12 justify-center mb-12">

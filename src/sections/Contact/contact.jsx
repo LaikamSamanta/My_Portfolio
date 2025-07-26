@@ -56,7 +56,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <form className="max-w-lg mx-auto" onSubmit={handleSubmit}>
+          <form className="contact-form max-w-lg mx-auto" onSubmit={handleSubmit}>
             <div className="mb-1">Name</div>
               <label className="input validator">
                 <svg

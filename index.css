@@ -6,16 +6,23 @@
   border-radius: 9999px;
 }
 
-body {
-  background: white;
+section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
 }
 
-section:nth-child(even) {
-  background: black;
-  color: white;
+.sections {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
 
-section:nth-child(odd) {
-  background: white;
-  color: black;
+.animated-grid {
+  color: red;
+  background-color: grey;
 }
