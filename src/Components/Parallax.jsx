@@ -2,9 +2,9 @@ import './Parallax.css';
 import { generateBoxShadows } from './generateStars';
 
 const StarField = () => {
-  const shadowsSmall = generateBoxShadows(900);
-  const shadowsMedium = generateBoxShadows(200);
-  const shadowsBig = generateBoxShadows(100);
+  const shadowsSmall = generateBoxShadows(100);
+  const shadowsMedium = generateBoxShadows(60);
+  const shadowsBig = generateBoxShadows(30);
 
   return (
     <div className="starfield">

@@ -5,12 +5,12 @@ import { AnimatedGridPattern } from "./Components/magicui/animated-grid-pattern"
 import ClientLogo from "./sections/Skills/skills";
 import Contact from "./sections/Contact/contact";
 import MyProjects from "./sections/Projects/projects";
-import Stars from "./Components/Parallax";
 import StarField from "./Components/Parallax";
 
 function App() {
   return (
     <>
+      <StarField className="fixed top-0 left-0 right-0 w-full h-full -z-10" />
       <div className="navbar-container">
         <Navbar />
       </div>
@@ -20,7 +20,6 @@ function App() {
         <Hero />
       </section>
       <section id="about">
-      <StarField className="absolute inset-0 z-0" />
         <div className="container mx-auto px-4 py-8">
           <h2 className="text-3xl font-bold mb-4">About Me</h2>
           <p className="text-lg">
