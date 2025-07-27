@@ -2,17 +2,21 @@ import Navbar from "./Components/Navbar";
 import Hero from "./sections/Hero/hero";
 import "../index.css";
 import { AnimatedGridPattern } from "./Components/magicui/animated-grid-pattern";
-import ClientLogo1 from "./sections/Skills/skills";
+import ClientLogo from "./sections/Skills/skills";
 import Contact from "./sections/Contact/contact";
+import MyProjects from "./sections/Projects/projects";
+import StarField from "./Components/Parallax";
 
 function App() {
   return (
     <>
-      <AnimatedGridPattern className="absolute inset-0 z-0" />
-      <section className="navbar-container">
+      <StarField className="fixed top-0 left-0 right-0 w-full h-full -z-10" />
+      <div className="navbar-container">
         <Navbar />
-      </section>
-      <section className="hero-section">
+      </div>
+      <div className="sections">
+      <section id="hero-section" className="relative">
+       <AnimatedGridPattern className="animated-grid absolute inset-0 z-0" />
         <Hero />
       </section>
       <section id="about">
@@ -26,7 +30,7 @@ function App() {
       <section id="skills">
         <div className="container mx-auto px-4 py-8">
           <h2 className="text-3xl font-bold mb-4">Skills</h2>
-          <ClientLogo1 />
+          <ClientLogo />
         </div>
       </section>
       <section id="projects">
@@ -35,14 +39,16 @@ function App() {
           <p className="text-lg">
             This is the projects section where you can showcase your projects.
           </p>
+          <MyProjects />
         </div>
       </section>
       <section id="contact">
         <div className="container mx-auto px-4 py-8">
-          <h2 className="text-3xl font-bold mb-4">Contact</h2>
+          <h2 className="text-3xl font-bold mb-4">Contact Me</h2>
           <Contact />
         </div>
       </section>
+      </div>
     </>
   );
 }

@@ -1,13 +1,48 @@
 .btn-message {
-  background-color: #4141a3;
+  background-color:  rgba(255,255,255,0.3);
+  color: rgb(112, 112, 112);
+  border: solid 1px black;
+  width: 120px;
+  align-self: center;
+  transition: background 0.3s ease;
+  box-shadow: 4px 4px 60px rgba(0,0,0,0.4);
 }
 
 .btn-message:hover {
-  background-color: #2e2e7a;
+  background-color: rgba(0, 0, 0, 0.15);
 }
 .message {
-  width: 500px;
-  height: 100px;  
-  padding: 10px 0px 60px 15px;
   text-align: left;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding: 2rem;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
+  background: linear-gradient(135deg, grey , white );
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: var(--white-color);
+  font-size: 1rem;
+  box-sizing: border-box;
+  border-radius: 32px;
+  }
+
+label, textarea {
+  padding: 0.8rem 1rem;
+  border: 1px solid rgba(0, 0, 0 ,0.15);
+  border-radius: 16px;
+  width: 100%;
+  background: rgba(255,255,255,0.3);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 4px 4px 60px rgba(0,0,0,0.4);
+  color: black;
+  font-size: 1rem;
+  transition: border-color 0.3 ease;
 }
