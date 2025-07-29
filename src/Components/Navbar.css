@@ -50,6 +50,9 @@
   background-color: var(--main-color);
   text-decoration: none;
   border: 1px solid var(--secondary-color);
+  width: 140px;
+  font-size: 11px;
+  margin: auto;
 }
 
 .download:hover {
