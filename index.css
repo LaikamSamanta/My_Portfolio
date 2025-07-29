@@ -23,6 +23,11 @@ section {
 }
 
 .animated-grid {
+<<<<<<< Updated upstream
   color: red;
   background-color: grey;
 }
+=======
+  background: #00010d
+}
+>>>>>>> Stashed changes
