@@ -5,7 +5,6 @@
 }
 
 .navbar {
-<<<<<<< Updated upstream
     border-radius: 100px;
     box-shadow: 0 4px 30px var(--black-color);
     backdrop-filter: blur(3px);
@@ -29,7 +28,6 @@
     text-decoration: none;
     margin-right: 1rem;
     border: 1px solid var(--secondary-color);
-=======
   border-radius: 100px;
   background: rgba(255, 255, 255, 0.07);
   box-shadow: 0 8px 24px rgba(255, 255, 255, 0.08);
@@ -52,22 +50,6 @@
   background-color: var(--main-color);
   text-decoration: none;
   border: 1px solid var(--secondary-color);
-  width: 140px;
-  font-size: 11px;
-  margin: auto;
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 }
 
 .download:hover {
@@ -117,4 +99,3 @@
 =======
   background-color: #202020;
 }
->>>>>>> Stashed changes
