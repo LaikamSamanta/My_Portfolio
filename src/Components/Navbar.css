@@ -1,33 +1,10 @@
 :root {
-    --main-color: #070707;
-    --black-color: rgba(0, 0, 0, 1);
-    --secondary-color: #ffffff;
+  --main-color: #070707;
+  --black-color: rgba(0, 0, 0, 1);
+  --secondary-color: #ffffff;
 }
 
 .navbar {
-    border-radius: 100px;
-    box-shadow: 0 4px 30px var(--black-color);
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
-    border: 2px solid var(--black-color);
-    top: 1rem;
-    width: 50%;
-    position: fixed;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    transition: border-color 0.3s ease;
-}
-
-
-.download {
-    color: var(--secondary-color);
-    background-color: var(--main-color);
-    text-decoration: none;
-    margin-right: 1rem;
-    border: 1px solid var(--secondary-color);
   border-radius: 100px;
   background: rgba(255, 255, 255, 0.07);
   box-shadow: 0 8px 24px rgba(255, 255, 255, 0.08);
@@ -35,70 +12,52 @@
   -webkit-backdrop-filter: blur(6px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   top: 1rem;
-  width: 70%;
+  width: 50%;
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1000;
+  display: flex;
   justify-content: space-between;
   padding: 0.75rem 1.5rem;
   color: #eaeaff;
 }
 
+.navbar.scrolled {
+  box-shadow: 0 10px 60px rgba(164, 125, 255, 0.25); /* light nebula glow */
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+
 .download {
   color: var(--secondary-color);
   background-color: var(--main-color);
   text-decoration: none;
+  margin-right: 1rem;
   border: 1px solid var(--secondary-color);
-  width: 140px;
-  font-size: 11px;
-  margin: auto;
 }
 
 .download:hover {
-    background-color: #202020;
+  background-color: #202020;
 }
-
 .menu {
-    color: var(--secondary-color);
+  color: var(--secondary-color);
 }
 
 .menu-drop {
-    background-color: var(--main-color);
-    color: var(--secondary-color);
+  background-color: var(--main-color);
+  color: var(--secondary-color);
 }
 
 .avatar {
-    margin-left: 1rem;
+  margin-left: 1rem;
 }
 
 .burger {
-    background-color: var(--main-color);
-    border: 1px solid var(--secondary-color);
+  background-color: var(--main-color);
+  border: 1px solid var(--secondary-color);
 }
 
 .burger:hover {
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    background-color: #202020;
-}
-=======
-  background-color: #202020;
-<<<<<<< Updated upstream
-}
->>>>>>> Stashed changes
-=======
-}
->>>>>>> Stashed changes
-=======
-  background-color: #202020;
-<<<<<<< Updated upstream
-}
->>>>>>> Stashed changes
-=======
-}
->>>>>>> Stashed changes
-=======
   background-color: #202020;
 }
