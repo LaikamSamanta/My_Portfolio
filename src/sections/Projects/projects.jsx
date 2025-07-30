@@ -2,15 +2,15 @@ import "./projects.css";
 
 function MyProjects() {
   return (
-    <div ClassName="projects">
+    <div className="projects">
       <h1>Projects</h1>
-      <div ClassName="projects-container">
-        <div ClassName="container">
-          <div ClassName="card card-1">
-            <div ClassName="preview">
+      <div className="projects-container">
+        <div className="container">
+          <div className="card card-1">
+            <div className="preview">
               <h4>Hover</h4>
             </div>
-            <div ClassName="content">
+            <div className="content">
               <div>
                 <h2>01</h2>
                 <h3>Card One</h3>
@@ -22,11 +22,11 @@ function MyProjects() {
               </div>
             </div>
           </div>
-          <div ClassName="card card-2">
-            <div ClassName="preview">
+          <div className="card card-2">
+            <div className="preview">
               <h4>Hover</h4>
             </div>
-            <div ClassName="content">
+            <div className="content">
               <div>
                 <h2>02</h2>
                 <h3>Card Two</h3>
@@ -38,11 +38,11 @@ function MyProjects() {
               </div>
             </div>
           </div>
-          <div ClassName="card card-3">
-            <div ClassName="preview">
+          <div className="card card-3">
+            <div className="preview">
               <h4>Hover</h4>
             </div>
-            <div ClassName="content">
+            <div className="content">
               <div>
                 <h2>03</h2>
                 <h3>Card Three</h3>
