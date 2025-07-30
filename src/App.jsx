@@ -5,7 +5,7 @@ import { AnimatedGridPattern } from "./Components/magicui/animated-grid-pattern"
 import ClientLogo from "./sections/Skills/skills";
 import Contact from "./sections/Contact/contact";
 import MyProjects from "./sections/Projects/projects";
-import StarField from "./Components/Parallax";
+import StarField from "./Components/generateStars";
 
 function App() {
   return (
