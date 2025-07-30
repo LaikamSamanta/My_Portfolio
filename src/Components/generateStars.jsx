@@ -1,43 +1,66 @@
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import "./Parallax.css";
 
-function createStars(count, screenW, screenH) {
-  const starPositions = [];
+// randomly stars on the background
+function makeStarPositions(totalStars, width, height) {
+  let stars = [];
 
-  for (let i = 0; i < count; i++) {
+  for (let i = 0; i < totalStars; i++) {
+    // Random x and y positions
+    let starX = Math.floor(Math.random() * width);
+    let starY = Math.floor(Math.random() * height);
 
-    const xPos = Math.floor(Math.random() * screenW);
-    const yPos = Math.floor(Math.random() * screenH);
+    // Opacity between 0.5 and 1
+    let transparency = Math.random() * 0.5 + 0.5;
 
-    const alpha = (0.5 + Math.random() * 0.5).toFixed(2);
-
-    starPositions.push(`${xPos}px ${yPos}px rgba(255, 255, 255, ${alpha})`);
+    // storing the star as a string
+    let starStr = `${starX}px ${starY}px rgba(255, 255, 255, ${transparency.toFixed(2)})`;
+    stars.push(starStr);
   }
 
-  return starPositions.join(", ");
+  // joining the stars to use as box-shadow
+  return stars.join(", ");
 }
 
 const Starfield = () => {
-
-  const layer1 = useRef(null);
-  const layer2 = useRef(null);
-  const layer3 = useRef(null);
+  const starsLayerOne = useRef(null);   // main stars
+  const layerTwo = useRef(null);        // mid stars
+  const thirdLayer = useRef(null);      // furthest stars
 
   useEffect(() => {
-    const screenWidth = window.innerWidth;
-    const screenHeight = window.innerHeight * 2; 
+    // Getting window size
+    let winWidth = window.innerWidth;
+    let winHeight = window.innerHeight * 2; // looks better
 
-    if (layer1.current) layer1.current.style.boxShadow = createStars(500, screenWidth, screenHeight);
-    if (layer2.current) layer2.current.style.boxShadow = createStars(300, screenWidth, screenHeight);
-    if (layer3.current) layer3.current.style.boxShadow = createStars(150, screenWidth, screenHeight);
+    // Generating stars for each layer separately
+    const stars1 = makeStarPositions(500, winWidth, winHeight);
+    const stars2 = makeStarPositions(300, winWidth, winHeight);
+    const stars3 = makeStarPositions(150, winWidth, winHeight);
+
+    if (starsLayerOne.current) {
+      starsLayerOne.current.style.boxShadow = stars1;
+    }
+
+    if (layerTwo.current) {
+      layerTwo.current.style.boxShadow = stars2;
+    }
+
+    if (thirdLayer.current) {
+      thirdLayer.current.style.boxShadow = stars3;
+    }
+
   }, []); 
 
   return (
     <div className="starfield">
+    
+      <div className="stars" ref={starsLayerOne}></div>
+
       
-      <div className="stars" ref={layer1} />
-      <div className="stars2" ref={layer2} />
-      <div className="stars3" ref={layer3} />
+      <div className="stars2" ref={layerTwo}></div>
+
+      
+      <div className="stars3" ref={thirdLayer}></div>
     </div>
   );
 };
