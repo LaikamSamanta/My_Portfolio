@@ -1,6 +1,6 @@
 import "./projects.css";
 
-export default function MyProjects() {
+function ProjectOne() {
   return (
 <div className="card bg-base-100 w-96 shadow-sm">
   <figure>
@@ -16,6 +16,10 @@ export default function MyProjects() {
     </div>
   </div>
 </div>
+);
+}
+ function ProjectTwo() {
+  return (
 <div className="card bg-base-100 w-96 shadow-sm">
   <figure>
     <img
@@ -29,6 +33,15 @@ export default function MyProjects() {
       <button className="btn btn-primary">Buy Now</button>
     </div>
   </div>
+</div>
+);
+}
+
+export default function MyProjects() {
+return (
+<div>
+  <ProjectOne />
+  <ProjectTwo />
 </div>
 );
 }
