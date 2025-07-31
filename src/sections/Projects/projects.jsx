@@ -1,63 +1,47 @@
 import "./projects.css";
 
-function MyProjects() {
+function ProjectOne() {
   return (
-    <div className="projects">
-      <h1>Projects</h1>
-      <div className="projects-container">
-        <div className="container">
-          <div className="card card-1">
-            <div className="preview">
-              <h4>Hover</h4>
-            </div>
-            <div className="content">
-              <div>
-                <h2>01</h2>
-                <h3>Card One</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Blanditiis consequuntur, quam officiis dolorum est reiciendis{" "}
-                </p>
-                <a href="#">Read More</a>
-              </div>
-            </div>
-          </div>
-          <div className="card card-2">
-            <div className="preview">
-              <h4>Hover</h4>
-            </div>
-            <div className="content">
-              <div>
-                <h2>02</h2>
-                <h3>Card Two</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Blanditiis consequuntur, quam officiis dolorum est reiciendis{" "}
-                </p>
-                <a href="#">Read More</a>
-              </div>
-            </div>
-          </div>
-          <div className="card card-3">
-            <div className="preview">
-              <h4>Hover</h4>
-            </div>
-            <div className="content">
-              <div>
-                <h2>03</h2>
-                <h3>Card Three</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Blanditiis consequuntur, quam officiis dolorum est reiciendis{" "}
-                </p>
-                <a href="#">Read More</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+<div className="card lg:card-side bg-base-100 shadow-sm">
+  <figure>
+    <img
+      src="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp"
+      alt="Album" />
+  </figure>
+  <div className="card-body">
+    <h2 className="card-title">New album is released!</h2>
+    <p>Click the button to listen on Spotiwhy app.</p>
+    <div className="card-actions justify-end">
+      <button className="btn btn-primary">Listen</button>
     </div>
-  );
+  </div>
+</div>
+);
+}
+ function ProjectTwo() {
+  return (
+<div className="card lg:card-side bg-base-100 shadow-sm">
+  <figure>
+    <img
+      src="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp"
+      alt="Album" />
+  </figure>
+  <div className="card-body">
+    <h2 className="card-title">New album is released!</h2>
+    <p>Click the button to listen on Spotiwhy app.</p>
+    <div className="card-actions justify-end">
+      <button className="btn btn-primary">Listen</button>
+    </div>
+  </div>
+</div>
+);
 }
 
-export default MyProjects;
+export default function MyProjects() {
+return (
+<div className="ProjectCards">
+  <ProjectOne />
+  <ProjectTwo />
+</div>
+);
+}
