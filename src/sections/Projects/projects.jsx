@@ -1,63 +1,14 @@
-import "./projects.css";
-
-function MyProjects() {
-  return (
-    <div class="projects">
-      <h1>Projects</h1>
-      <div class="projects-container">
-        <div class="container">
-          <div class="card card-1">
-            <div class="preview">
-              <h4>Hover</h4>
-            </div>
-            <div class="content">
-              <div>
-                <h2>01</h2>
-                <h3>Card One</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Blanditiis consequuntur, quam officiis dolorum est reiciendis{" "}
-                </p>
-                <a href="#">Read More</a>
-              </div>
-            </div>
-          </div>
-          <div class="card card-2">
-            <div class="preview">
-              <h4>Hover</h4>
-            </div>
-            <div class="content">
-              <div>
-                <h2>02</h2>
-                <h3>Card Two</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Blanditiis consequuntur, quam officiis dolorum est reiciendis{" "}
-                </p>
-                <a href="#">Read More</a>
-              </div>
-            </div>
-          </div>
-          <div class="card card-3">
-            <div class="preview">
-              <h4>Hover</h4>
-            </div>
-            <div class="content">
-              <div>
-                <h2>03</h2>
-                <h3>Card Three</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Blanditiis consequuntur, quam officiis dolorum est reiciendis{" "}
-                </p>
-                <a href="#">Read More</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+<div className="card bg-base-100 w-96 shadow-sm">
+  <figure>
+    <img
+      src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+      alt="Shoes" />
+  </figure>
+  <div className="card-body">
+    <h2 className="card-title">Card Title</h2>
+    <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+    <div className="card-actions justify-end">
+      <button className="btn btn-primary">Buy Now</button>
     </div>
-  );
-}
-
-export default MyProjects;
+  </div>
+</div>
