@@ -39,7 +39,7 @@ function ProjectOne() {
 
 export default function MyProjects() {
 return (
-<div>
+<div className="ProjectCards">
   <ProjectOne />
   <ProjectTwo />
 </div>
