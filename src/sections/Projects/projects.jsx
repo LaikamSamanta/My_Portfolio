@@ -1,4 +1,4 @@
-import "./Projects.css"
+import "./projects.css"
 
 export default Projects() {
   return (
