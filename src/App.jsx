@@ -21,30 +21,32 @@ function App() {
         </section>
         <section id="about">
           <div className="container mx-auto px-4 py-8">
-            <h2 className="text-3xl font-bold mb-4">About Me</h2>
-            <p className="text-lg">
+            <h2 className="section-titles text-3xl font-bold mb-4">About Me</h2>
+            <p className="section-text text-lg">
               This is the about section where you can write about yourself.
             </p>
           </div>
         </section>
         <section id="skills">
           <div className="container mx-auto px-4 py-8">
-            <h2 className="text-3xl font-bold mb-4">Skills</h2>
+            <h2 className="section-titles text-3xl font-bold mb-4">Skills</h2>
             <ClientLogo />
           </div>
         </section>
         <section id="projects">
           <div className="container mx-auto px-4 py-8">
-            <h2 className="text-3xl font-bold mb-4">Projects</h2>
-            <p className="text-lg">
+            <h2 className="section-titles text-3xl font-bold mb-4">Projects</h2>
+            <p className="section-text text-lg">
               This is the projects section where you can showcase your projects.
             </p>
+            <div className="container mx-auto px-4 py-30">
             <MyProjects />
+            </div>
           </div>
         </section>
         <section id="contact">
           <div className="container mx-auto px-4 py-8">
-            <h2 className="text-3xl font-bold mb-4">Contact Me</h2>
+            <h2 className="section-titles text-3xl font-bold mb-4">Contact Me</h2>
             <Contact />
           </div>
         </section>
