@@ -1,6 +1,6 @@
 import "./projects.css"
 
-export default Projects() {
+export default MyProjects() {
   return (
 <div className="card bg-base-100 w-96 shadow-sm">
   <figure>
