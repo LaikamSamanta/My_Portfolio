@@ -1,4 +1,4 @@
-import "./projects.css";
+iimport "./projects.css";
 
 function ProjectCard({ title, description, imgSrc }) {
   return (
@@ -56,4 +56,4 @@ function MyProjects() {
   );
 }
 
-export default MyProjects();
+export default MyProjects;
