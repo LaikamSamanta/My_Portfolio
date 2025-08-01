@@ -45,7 +45,7 @@
 
 /* Project Description */
 .project-description {
-  color: #666;
+  color: #ffffff;
   line-height: 1.6;
   margin-bottom: 1rem;
   font-size: 0.9rem;
@@ -132,12 +132,12 @@
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
-  color: #333;
+  color: #ffffff;
 }
 
 /* Hover Effects */
 .project-card .card {
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(240, 232, 232, 0.925);
   transition: all 0.3s ease;
 }
 
