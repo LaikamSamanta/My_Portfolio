@@ -29,7 +29,7 @@ function ProjectCard({ title, description, imgSrc }) {
   );
 }
 
-export default function MyProjects() {
+function MyProjects() {
   return (
     <div className="w-full h-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       <ProjectCard
@@ -55,3 +55,5 @@ export default function MyProjects() {
     </div>
   );
 }
+
+export default MyProjects();
