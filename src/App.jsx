@@ -34,12 +34,12 @@ function App() {
           </div>
         </section>
         <section id="projects">
-          <div className="container mx-auto px-4 py-8">
-            <h2 className="section-titles text-3xl font-bold mb-4">Projects</h2>
+          <div className="container mx-auto px-4 py-8 h-full flex flex-col">
+            <h2 className="section-titles text-3xl font-bold mb-2">Projects</h2>
             <p className="section-text text-lg">
               This is the projects section where you can showcase your projects.
             </p>
-            <div className="container mx-auto px-4 py-30">
+            <div className="flex-1 min-h-0">
             <MyProjects />
             </div>
           </div>
