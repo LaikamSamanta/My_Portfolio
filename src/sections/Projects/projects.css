@@ -53,6 +53,29 @@
   }
 }
 
+/* Enhanced responsive grid adjustments */
+@media (max-width: 640px) {
+  .card {
+    min-height: 120px;
+  }
+  
+  .card-body {
+    padding: 0.75rem !important;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .card {
+    min-height: 140px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .card {
+    min-height: 160px;
+  }
+}
+
 /* Additional mobile optimizations */
 @media (max-width: 380px) {
   .card-body {
@@ -78,5 +101,61 @@
   
   .card:hover {
     transform: none;
+  }
+  
+  .card:active {
+    transform: scale(0.98);
+  }
+}
+
+/* Enhanced hover effects for desktop */
+@media (hover: hover) {
+  .card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  .btn:hover {
+    transform: translateY(-1px);
+  }
+}
+
+/* Improved focus states for accessibility */
+.card:focus-within {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+.btn:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Smooth transitions */
+.card, .btn {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Responsive image handling */
+.card figure img {
+  transition: transform 0.3s ease;
+}
+
+@media (hover: hover) {
+  .card:hover figure img {
+    transform: scale(1.05);
+  }
+}
+
+/* Grid responsiveness improvements */
+@media (max-width: 480px) {
+  .grid {
+    gap: 0.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .grid {
+    gap: 1.5rem;
   }
 }

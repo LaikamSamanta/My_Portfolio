@@ -42,22 +42,22 @@ const Contact = () => {
   }
 
   return (
-    <div className="contact-container">
-        <div className="container px-4">
-          <div className="grid grid-cols-12 justify-center mb-12">
-            <div className="col-span-12 lg:col-span-6 lg:col-start-4 text-center">
-              <h2 className="font-bold text-[25px] lg:text-[35px] leading-none mb-6">
+    <div className="contact-container w-full">
+        <div className="container px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-12 justify-center mb-8 sm:mb-12">
+            <div className="col-span-12 lg:col-span-8 lg:col-start-3 xl:col-span-6 xl:col-start-4 text-center">
+              <h2 className="font-bold text-2xl sm:text-3xl lg:text-4xl leading-none mb-4 sm:mb-6">
                 Get in Touch
               </h2>
-              <p className="text-lg leading-6 opacity-70">
+              <p className="text-base sm:text-lg leading-6 opacity-70 px-4 sm:px-0">
                 Feel free to reach out for any inquiries or collaborations.
               </p>
             </div>
           </div>
 
           {/* Contact Form */}
-          <form className="contact-form max-w-lg mx-auto" onSubmit={handleSubmit}>
-            <div className="mb-1">Name</div>
+          <form className="contact-form max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto" onSubmit={handleSubmit}>
+            <div className="mb-2 text-sm sm:text-base font-medium">Name</div>
               <label className="input validator">
                 <svg
                   className="h-[1em] opacity-50"
@@ -84,7 +84,7 @@ const Contact = () => {
                 />
               </label>
               {/* Email Input with Validator */}
-              <div className="mb-1">Email</div>
+              <div className="mb-2 text-sm sm:text-base font-medium">Email</div>
               <label className="input validator">
                 <svg
                   className="h-[1em] opacity-50"
@@ -114,7 +114,7 @@ const Contact = () => {
                 Enter valid email address
               </div>
               {/* Message Input */}
-              <div className="mb-1">Message</div>
+              <div className="mb-2 text-sm sm:text-base font-medium">Message</div>
               <textarea
                 className="textarea validator message"
                 placeholder="Hello! How are you?"
@@ -122,7 +122,7 @@ const Contact = () => {
                 onChange={(e) => setMessage(e.target.value)}
               ></textarea>
               <div className="validator-hint hidden">Enter a message</div>
-            <button type="submit" className="btn btn-message mt-4 btn-outline">
+            <button type="submit" className="btn btn-message mt-4 sm:mt-6 btn-outline w-full sm:w-auto">
               Send
               <img
                 src="Public/Icons/send.png"
