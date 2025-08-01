@@ -19,35 +19,39 @@ function App() {
             <AnimatedGridPattern className="animated-grid absolute inset-0 z-0" />
             <Hero />
         </section>
-        <section id="about">
-          <div className="container mx-auto px-4 py-8">
-            <h2 className="section-titles text-3xl font-bold mb-4">About Me</h2>
-            <p className="section-text text-lg">
+        <section id="about" className="flex items-center justify-center">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 max-w-6xl">
+            <h2 className="section-titles text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 text-center sm:text-left">About Me</h2>
+            <p className="section-text text-base sm:text-lg lg:text-xl text-center sm:text-left">
               This is the about section where you can write about yourself.
             </p>
           </div>
         </section>
-        <section id="skills">
-          <div className="container mx-auto px-4 py-8">
-            <h2 className="section-titles text-3xl font-bold mb-4">Skills</h2>
-            <ClientLogo />
-          </div>
-        </section>
-        <section id="projects">
-          <div className="container mx-auto px-4 py-8 h-full flex flex-col">
-            <h2 className="section-titles text-3xl font-bold mb-2">Projects</h2>
-            <p className="section-text text-lg">
-              This is the projects section where you can showcase your projects.
-            </p>
-            <div className="flex-1 min-h-0">
-            <MyProjects />
+        <section id="skills" className="flex items-center justify-center">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 max-w-6xl">
+            <h2 className="section-titles text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 text-center sm:text-left">Skills</h2>
+            <div className="w-full">
+              <ClientLogo />
             </div>
           </div>
         </section>
-        <section id="contact">
-          <div className="container mx-auto px-4 py-8">
-            <h2 className="section-titles text-3xl font-bold mb-4">Contact Me</h2>
-            <Contact />
+        <section id="projects" className="flex items-center justify-center">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 max-w-6xl h-full flex flex-col">
+            <h2 className="section-titles text-2xl sm:text-3xl lg:text-4xl font-bold mb-2 text-center sm:text-left">Projects</h2>
+            <p className="section-text text-base sm:text-lg lg:text-xl text-center sm:text-left mb-4">
+              This is the projects section where you can showcase your projects.
+            </p>
+            <div className="flex-1 min-h-0 w-full">
+              <MyProjects />
+            </div>
+          </div>
+        </section>
+        <section id="contact" className="flex items-center justify-center">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 max-w-6xl">
+            <h2 className="section-titles text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 text-center sm:text-left">Contact Me</h2>
+            <div className="w-full">
+              <Contact />
+            </div>
           </div>
         </section>
       </div>
