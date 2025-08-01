@@ -27,7 +27,7 @@ function ProjectCard({ title, description, imgSrc }) {
 
 export default function MyProjects() {
   return (
-    <div className="container w-full h-full flex flex-col">
+    <div className="container w-full h-full flex flex-col sm:flex-row">
       <div className="flex-1 max-w-6xl mx-auto w-full flex flex-col">
         {/* Projects Grid - takes remaining space */}
         <div className="flex-1 grid gap-2 sm:gap-3 lg:gap-4 grid-cols-1 sm:grid-cols-2 auto-rows-fr overflow-hidden">
