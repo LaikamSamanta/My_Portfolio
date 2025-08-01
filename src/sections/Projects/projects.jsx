@@ -31,29 +31,31 @@ function ProjectCard({ title, description, imgSrc }) {
 
 export default function MyProjects() {
   return (
-    <div className="container mx-auto px-4 py-6 sm:py-8 lg:py-12 min-h-screen">
-      <div className="grid gap-4 sm:gap-6 lg:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 auto-rows-fr">
-        <ProjectCard
-          title="New album is released!"
-          description="Click the button to listen on Spotiwhy app."
-          imgSrc="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp"
-        />
-        <ProjectCard
-          title="Another album is out!"
-          description="Tap the link and enjoy the tracks on Spotiwhy app."
-          imgSrc="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp"
-        />
-        <ProjectCard
-          title="Latest Single Drop"
-          description="Experience our newest sound with this fresh release."
-          imgSrc="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp"
-        />
-        <ProjectCard
-          title="Live Concert Recording"
-          description="Relive the energy of our live performance."
-          imgSrc="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp"
-        />
+    <section className="h-screen w-full flex flex-col">
+      <div className="flex-1 overflow-y-auto px-4 py-6 sm:py-8 lg:py-10 max-w-7xl mx-auto">
+        <div className="grid gap-4 sm:gap-6 lg:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 auto-rows-fr">
+          <ProjectCard
+            title="New album is released!"
+            description="Click the button to listen on Spotiwhy app."
+            imgSrc="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp"
+          />
+          <ProjectCard
+            title="Another album is out!"
+            description="Tap the link and enjoy the tracks on Spotiwhy app."
+            imgSrc="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp"
+          />
+          <ProjectCard
+            title="Latest Single Drop"
+            description="Experience our newest sound with this fresh release."
+            imgSrc="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp"
+          />
+          <ProjectCard
+            title="Live Concert Recording"
+            description="Relive the energy of our live performance."
+            imgSrc="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp"
+          />
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
