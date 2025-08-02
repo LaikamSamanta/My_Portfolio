@@ -46,6 +46,11 @@ const clientLogos = [
     alt: "GitHub",
     title: "GitHub",
   },
+   {
+    logo: "../../git.png",
+    alt: "Git",
+    title: "Git",
+  },
 ];
 
 export default function ClientLogo() {
@@ -85,4 +90,5 @@ export default function ClientLogo() {
     </div>
   );
 }
+
 
