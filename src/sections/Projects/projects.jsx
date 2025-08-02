@@ -12,16 +12,16 @@ export default function MyProjects() {
                 alt="Project 1" />
             </figure>
             <div className="card-body">
-              <h2 className="card-title">Project 1</h2>
-              <p className="project-description">A modern web application built with React and Node.js. Features include user authentication, real-time updates, and responsive design.</p>
+              <h2 className="card-title">Sportlandija(Blog site)</h2>
+              <p className="project-description">My first website, which I built entirely from scratch with a database-backed structure, enables the administrator to manage and update videos, images, and event listings.</p>
               <div className="project-tech">
-                <span className="tech-tag">React</span>
-                <span className="tech-tag">Node.js</span>
-                <span className="tech-tag">MongoDB</span>
+                <span className="tech-tag">HTML</span>
+                <span className="tech-tag">CSS</span>
+                <span className="tech-tag">PHP</span>
+                 <span className="tech-tag">SQL</span>
               </div>
               <div className="card-actions justify-end">
-                <button className="btn btn-primary">View Project</button>
-                <button className="btn btn-outline">GitHub</button>
+                <button className="btn btn-outline">View on GitHub</button>
               </div>
             </div>
           </div>
@@ -35,16 +35,15 @@ export default function MyProjects() {
                 alt="Project 2" />
             </figure>
             <div className="card-body">
-              <h2 className="card-title">Project 2</h2>
+              <h2 className="card-title">E-Commerce website</h2>
               <p className="project-description">An e-commerce platform with advanced features like payment processing, inventory management, and admin dashboard.</p>
               <div className="project-tech">
-                <span className="tech-tag">Vue.js</span>
-                <span className="tech-tag">Express</span>
-                <span className="tech-tag">PostgreSQL</span>
+                <span className="tech-tag">React.js</span>
+                <span className="tech-tag">Laravel</span>
+                <span className="tech-tag">SQL</span>
               </div>
               <div className="card-actions justify-end">
-                <button className="btn btn-primary">View Project</button>
-                <button className="btn btn-outline">GitHub</button>
+                <button className="btn btn-outline">View on GitHub</button>
               </div>
             </div>
           </div>
