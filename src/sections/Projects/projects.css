@@ -6,6 +6,8 @@
   padding: 2rem 0;
   height: 100%;
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Projects Grid Layout */
@@ -15,6 +17,38 @@
   gap: 2rem;
   width: 100%;
   max-width: 100%;
+  flex: 1;
+}
+
+/* See More Button Container */
+.see-more-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+  padding: 0 1rem;
+}
+
+.see-more-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.see-more-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.see-more-btn:active {
+  transform: translateY(0);
 }
 
 /* Individual Project Card */
@@ -90,13 +124,15 @@
 @media (max-width: 768px) {
   .projects-container {
     padding: 1rem 0;
-    max-height: 100%;
+    max-height: 100vh;
     overflow-y: auto;
   }
   
   .projects-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+    max-height: calc(100vh - 120px); /* Account for button space */
+    overflow-y: auto;
   }
   
   .project-card .card {
@@ -108,6 +144,16 @@
     width: 100%;
     height: 180px;
   }
+
+  .see-more-container {
+    margin-top: 1rem;
+    padding: 0 0.5rem;
+  }
+
+  .see-more-btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.85rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -117,6 +163,7 @@
   
   .projects-grid {
     gap: 1rem;
+    max-height: calc(100vh - 100px);
   }
   
   .project-image {
@@ -146,12 +193,21 @@
     font-size: 0.8rem;
     padding: 0.4rem 0.8rem;
   }
+
+  .see-more-btn {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.8rem;
+  }
 }
 
 /* Mobile Height Adjustments */
 @media (max-height: 700px) and (max-width: 768px) {
   .projects-container {
     padding: 0.5rem 0;
+  }
+  
+  .projects-grid {
+    max-height: calc(100vh - 80px);
   }
   
   .project-card .card {
@@ -170,12 +226,22 @@
     font-size: 0.8rem;
     margin-bottom: 0.75rem;
   }
+
+  .see-more-container {
+    margin-top: 0.75rem;
+  }
+
+  .see-more-btn {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.8rem;
+  }
 }
 
 /* Extra small mobile heights */
 @media (max-height: 600px) and (max-width: 768px) {
   .projects-grid {
     gap: 0.75rem;
+    max-height: calc(100vh - 70px);
   }
   
   .project-image {
@@ -209,6 +275,15 @@
   .card-actions .btn {
     font-size: 0.75rem;
     padding: 0.3rem 0.6rem;
+  }
+
+  .see-more-container {
+    margin-top: 0.5rem;
+  }
+
+  .see-more-btn {
+    padding: 0.4rem 1rem;
+    font-size: 0.75rem;
   }
 }
 

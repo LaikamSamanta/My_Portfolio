@@ -9,6 +9,7 @@
 @media (max-width: 320px) and (max-height: 375px) {
   .skills-container .container {
     padding: 0.25rem;
+    padding-top: 4rem; /* Ensure heading is visible on very small screens */
   }
   
   .skills-container .grid.grid-cols-12 {
