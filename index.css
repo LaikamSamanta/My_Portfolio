@@ -60,6 +60,29 @@ section {
   }
 }
 
+/* Mobile height adjustments for better content management */
+@media (max-height: 700px) and (max-width: 768px) {
+  section {
+    padding: 8vh 2vw 2vh 2vw;
+  }
+}
+
+@media (max-height: 600px) and (max-width: 768px) {
+  section {
+    padding: 6vh 2vw 1vh 2vw;
+  }
+  
+  .section-titles {
+    font-size: 1.25rem !important;
+  }
+  
+  .section-text {
+    font-size: 0.8rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
+
 #hero-section {
   justify-content: center;
   align-items: center;
@@ -90,6 +113,23 @@ section {
 @media (min-width: 641px) and (max-width: 1024px) {
   .container {
     padding: 0.375rem;
+  }
+}
+
+/* Ensure content sections have proper overflow handling on mobile */
+@media (max-width: 768px) {
+  #projects .container,
+  #skills .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #projects .flex-1,
+  #skills .w-full {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
   }
 }
 
