@@ -1,3 +1,5 @@
+import "./skills.css";
+
 const clientLogos = [
   {
     logo: "../../javascript.png",
@@ -43,6 +45,7 @@ const clientLogos = [
 
 export default function ClientLogo() {
   return (
+    <div className="skills-container">
       <div className="container px-4">
         <div className="grid grid-cols-12 justify-center mb-12">
           <div className="col-span-12 lg:col-span-6 lg:col-start-4 text-center px-4 py-8">
@@ -74,5 +77,6 @@ export default function ClientLogo() {
           ))}
         </div>
       </div>
+    </div>
   );
 }
