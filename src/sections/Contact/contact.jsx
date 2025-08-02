@@ -126,7 +126,7 @@ const Contact = () => {
             <button type="submit" className="btn btn-message mt-4 sm:mt-6 btn-outline w-full sm:w-auto">
               Send
               <img
-                src="Public/Icons/send.png"
+                src="/Icons/send.png"
                 width={20}
                 height={16}
                 className="opacity-70 send"
@@ -141,3 +141,4 @@ const Contact = () => {
 };
 
 export default Contact;
+
