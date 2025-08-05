@@ -39,7 +39,6 @@ function App() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 max-w-6xl h-full flex flex-col">
             <h2 className="section-titles text-2xl sm:text-3xl lg:text-4xl font-bold mb-2 text-center sm:text-left px-4 py-2">Projects</h2>
             <p className="section-text text-base sm:text-lg lg:text-xl text-center sm:text-left mb-4 px-4 py-3">
-              This is the projects section where you can showcase your projects.
             </p>
             <div className="flex-1 min-h-0 w-full">
               <MyProjects />
