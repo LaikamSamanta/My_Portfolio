@@ -20,7 +20,7 @@ export default function Navbar() {
     </div>
     <div className="avatar">
   <div className="ring w-12 rounded-full ring-offset-2 ring-neutral">
-    <img src="src/assets/Samanta.jpg" />
+    <img src="/MyPhoto/Samanta.PNG" />
   </div>
 </div>
   </div>
