@@ -3,9 +3,9 @@ import { AuroraText } from "../../Components/magicui/aurora-text";
 
 const user = {
   title: "SAMANTA BIEZĒKA",
-  imageSrc: "src/assets/Samanta.jpg",
-  width: 155,
-  height: 180,
+  imageSrc: "public/MyPhoto/Samanta.PNG",
+  width: 200,
+  height: 250,
   description: "I am a Junior Web Developer. ",
 };
 
