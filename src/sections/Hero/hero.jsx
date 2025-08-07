@@ -12,7 +12,7 @@ const user = {
 export default function Hero() {
   return (
     <div className="hero bg-base-200 min-h-screen">
-      <div className="hero-content flex-col lg:flex-row">
+      <div className="hero-content flex-col lg:flex-row gap-4 sm:gap-6 lg:gap-8">
         <img
           className="Samanta"
           src={user.imageSrc}
@@ -20,13 +20,17 @@ export default function Hero() {
           style={{ width: user.width, height: user.height }}
         ></img>
         <div className="max-w-sm rounded-lg shadow-2xl" />
-        <div>
-        <div className="container">
-          <h1 className="font-bold title-name text-4xl tracking-tighter md:text-5xl lg:text-7xl"><span>Hi, I am <AuroraText>{user.title}</AuroraText></span></h1>
-          <h1 className="py-8">{user.description}</h1>
+        <div className="text-center lg:text-left">
+        <div className="container px-4 sm:px-6 lg:px-8">
+          <h1 className="font-bold title-name text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl tracking-tighter leading-tight">
+            <span>Hi, I am <AuroraText>{user.title}</AuroraText></span>
+          </h1>
+          <h1 className="py-4 sm:py-6 lg:py-8 text-sm sm:text-base lg:text-lg">{user.description}</h1>
         </div>
-          <button className="btn btn-primary">Learn more about me</button>
-          <button className="btn btn-secondary ml-4">Contact me</button>
+          <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 justify-center lg:justify-start">
+            <button className="btn btn-primary text-xs sm:text-sm lg:text-base">Learn more about me</button>
+            <button className="btn btn-secondary text-xs sm:text-sm lg:text-base">Contact me</button>
+          </div>
         </div>
       </div>
     </div>

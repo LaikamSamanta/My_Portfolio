@@ -61,3 +61,95 @@
 .burger:hover {
   background-color: #202020;
 }
+
+/* Responsive Navbar */
+@media (max-width: 1024px) {
+  .navbar {
+    width: 80%;
+    padding: 0.6rem 1.25rem;
+  }
+  
+  .download {
+    margin-right: 0.75rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    width: 90%;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+  }
+  
+  .download {
+    margin-right: 0.5rem;
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .avatar {
+    margin-left: 0.75rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .navbar {
+    width: 95%;
+    padding: 0.4rem 0.8rem;
+    border-radius: 40px;
+  }
+  
+  .download {
+    margin-right: 0.4rem;
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+  }
+  
+  .avatar {
+    margin-left: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    width: 98%;
+    padding: 0.3rem 0.6rem;
+    border-radius: 30px;
+  }
+  
+  .download {
+    margin-right: 0.3rem;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+  }
+  
+  .avatar {
+    margin-left: 0.4rem;
+  }
+}
+
+/* Mobile height adjustments */
+@media (max-height: 700px) and (max-width: 768px) {
+  .navbar {
+    top: 0.5rem;
+    padding: 0.3rem 0.8rem;
+  }
+  
+  .download {
+    font-size: 0.8rem;
+    padding: 0.25rem 0.5rem;
+  }
+}
+
+@media (max-height: 600px) and (max-width: 768px) {
+  .navbar {
+    top: 0.25rem;
+    padding: 0.25rem 0.6rem;
+  }
+  
+  .download {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.4rem;
+  }
+}
