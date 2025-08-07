@@ -45,13 +45,8 @@ function App() {
             </div>
           </div>
         </section>
-        <section id="contact" className="flex items-center justify-center">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 max-w-6xl">
-            <h2 className="section-titles text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 text-center sm:text-left px-4 py-2">Contact Me</h2>
-            <div className="w-full">
-              <Contact />
-            </div>
-          </div>
+        <section id="contact" className="flex items-center justify-center relative">
+          <Contact />
         </section>
       </div>
     </>

@@ -42,14 +42,17 @@ const Contact = () => {
   }
 
   return (
-    <div className="contact-container w-full">
+    <div className="contact-container w-full h-full flex flex-col items-center justify-center">
         <div className="container px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-12 justify-center mb-8 sm:mb-12">
             <div className="col-span-12 lg:col-span-8 lg:col-start-3 xl:col-span-6 xl:col-start-4 text-center px-4 py-8">
-              <h2 className="font-bold text-2xl sm:text-3xl lg:text-4xl leading-none mb-4 sm:mb-6 px-4">
-                Get in Touch
+              <h2 className="section-titles text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 px-4 text-white">
+                Contact Me
               </h2>
-              <p className="text-base sm:text-lg leading-6 opacity-70 px-4 py-2">
+              <h3 className="font-bold text-xl sm:text-2xl lg:text-3xl leading-none mb-4 sm:mb-6 px-4 text-white">
+                Get in Touch
+              </h3>
+              <p className="text-base sm:text-lg leading-6 opacity-70 px-4 py-2 text-white">
                 Feel free to reach out for any inquiries or collaborations.
               </p>
             </div>
@@ -58,7 +61,7 @@ const Contact = () => {
           {/* Contact Form */}
           <div className="contact-form-container">
           <form className="contact-form max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto" onSubmit={handleSubmit}>
-            <div className="mb-2 text-sm sm:text-base font-medium">Name</div>
+            <div className="mb-2 text-sm sm:text-base font-medium text-white">Name</div>
               <label className="input validator">
                 <svg
                   className="h-[1em] opacity-50"
@@ -85,7 +88,7 @@ const Contact = () => {
                 />
               </label>
               {/* Email Input with Validator */}
-              <div className="mb-2 text-sm sm:text-base font-medium">Email</div>
+              <div className="mb-2 text-sm sm:text-base font-medium text-white">Email</div>
               <label className="input validator">
                 <svg
                   className="h-[1em] opacity-50"
@@ -115,7 +118,7 @@ const Contact = () => {
                 Enter valid email address
               </div>
               {/* Message Input */}
-              <div className="mb-2 text-sm sm:text-base font-medium">Message</div>
+              <div className="mb-2 text-sm sm:text-base font-medium text-white">Message</div>
               <textarea
                 className="textarea validator message"
                 placeholder="Hello! How are you?"
