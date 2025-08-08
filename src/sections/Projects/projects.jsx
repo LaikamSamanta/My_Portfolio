@@ -7,14 +7,16 @@ export default function MyProjects() {
       title: "Sportlandija(Blog site)",
       description: "My first website, which I built entirely from scratch with a database-backed structure, enables the administrator to manage and update videos, images, and event listings.",
       image: "https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp",
-      tech: ["HTML", "CSS", "PHP", "SQL"]
+      tech: ["HTML", "CSS", "PHP", "SQL"],
+      icon: ["html5.png", "ccs3.png", "php.png", "database.png"]
     },
     {
       id: 2,
       title: "E-Commerce website",
       description: "An e-commerce platform with advanced features like payment processing, inventory management, and admin dashboard.",
       image: "https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp",
-      tech: ["React.js", "Laravel", "SQL"]
+      tech: ["React.js", "Laravel", "SQL"],
+      icon: ["react.png", "Laravel.svg.png", "database.png"]
     }
   ];
 
@@ -33,6 +35,9 @@ export default function MyProjects() {
                 <h2 className="card-title">{project.title}</h2>
                 <p className="project-description">{project.description}</p>
                 <div className="project-tech">
+                  <img
+                    src={project.icon}
+                    alt={project.tech} />
                   {project.tech.map((tech, index) => (
                     <span key={index} className="tech-tag">{tech}</span>
                   ))}
