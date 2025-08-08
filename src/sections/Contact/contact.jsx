@@ -93,7 +93,7 @@ const Contact = () => {
       <input
         type="email"
         placeholder="mail@site.com"
-        className="email bg-transparent outline-none text-black placeholder-black/50 flex-1"
+        className="email bg-transparent outline-none text-white placeholder-white/50 flex-1"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
@@ -103,7 +103,7 @@ const Contact = () => {
     {/* Message Input */}
     <div className="mt-4 mb-2 text-sm sm:text-base font-medium text-black">Message</div>
     <textarea
-      className="textarea validator message w-full min-h-[100px] p-3 bg-white text-black placeholder-black/50 rounded-md border border-black/20 outline-none focus:ring-2 focus:ring-black"
+      className="textarea validator message w-full min-h-[100px] p-3 bg-black tex—white placeholder-black/50 rounded-md border border-white/20 focus:ring-2 focus:ring-white"
       placeholder="Hello! How are you?"
       value={message}
       onChange={(e) => setMessage(e.target.value)}
@@ -113,7 +113,7 @@ const Contact = () => {
     {/* Submit Button */}
     <button
       type="submit"
-      className="btn btn-message mt-6 w-full sm:w-auto px-6 py-2 rounded-md border border-black bg-black text-white hover:bg-white hover:text-black transition font-semibold"
+      className="btn btn-message mt-6 w-full sm:w-auto px-6 py-2 rounded-md border border-white bg-white text-black hover:bg-black hover:text-white transition font-semibold"
     >
       Send
       <img src="/Icons/send.png" width={20} height={16} className="opacity-70 send ml-2" />
