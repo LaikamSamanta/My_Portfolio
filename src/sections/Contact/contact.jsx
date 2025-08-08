@@ -42,7 +42,6 @@ const Contact = () => {
   }
 
   return (
-    <div className="contact-container w-full h-full flex flex-col items-center justify-center">
         <div className="container px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-12 justify-center mb-8 sm:mb-12">
             <div className="col-span-12 lg:col-span-8 lg:col-start-3 xl:col-span-6 xl:col-start-4 text-center px-4 py-8">
@@ -137,7 +136,6 @@ const Contact = () => {
             </button>
           </form>
         </div>
-    </div>
     </div>
   );
 
