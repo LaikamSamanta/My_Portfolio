@@ -58,84 +58,68 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="contact-form-container">
-          <form className="contact-form max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto" onSubmit={handleSubmit}>
-            <div className="mb-2 text-sm sm:text-base font-medium text-white">Name</div>
-              <label className="input validator">
-                <svg
-                  className="h-[1em] opacity-50"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                >
-                  <g
-                    strokeLinejoin="round"
-                    strokeLinecap="round"
-                    strokeWidth="2.5"
-                    fill="none"
-                    stroke="currentColor"
-                  >
-                    <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
-                    <circle cx="12" cy="7" r="4"></circle>
-                  </g>
-                </svg>
-                <input
-                  type="text"
-                  placeholder="User"
-                  className="name"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                />
-              </label>
-              {/* Email Input with Validator */}
-              <div className="mb-2 text-sm sm:text-base font-medium text-white">Email</div>
-              <label className="input validator">
-                <svg
-                  className="h-[1em] opacity-50"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                >
-                  <g
-                    strokeLinejoin="round"
-                    strokeLinecap="round"
-                    strokeWidth="2.5"
-                    fill="none"
-                    stroke="currentColor"
-                  >
-                    <rect width="20" height="16" x="2" y="4" rx="2"></rect>
-                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-                  </g>
-                </svg>
-                <input
-                  type="email"
-                  placeholder="mail@site.com"
-                  className="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-              </label>
-              <div className="validator-hint hidden">
-                Enter valid email address
-              </div>
-              {/* Message Input */}
-              <div className="mb-2 text-sm sm:text-base font-medium text-white">Message</div>
-              <textarea
-                className="textarea validator message"
-                placeholder="Hello! How are you?"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-              ></textarea>
-              <div className="validator-hint hidden">Enter a message</div>
-            <button type="submit" className="btn btn-message mt-4 sm:mt-6 btn-outline w-full sm:w-auto">
-              Send
-              <img
-                src="/Icons/send.png"
-                width={20}
-                height={16}
-                className="opacity-70 send"
-              />
-            </button>
-          </form>
-        </div>
+        <div className="contact-form-container min-h-screen flex items-center justify-center bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0f172a] p-6">
+  <form
+    className="contact-form w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto p-6 sm:p-10 rounded-xl shadow-xl border border-white/10 bg-white/10 backdrop-blur-md"
+    onSubmit={handleSubmit}
+  >
+    {/* Name Input */}
+    <div className="mb-2 text-sm sm:text-base font-medium text-white">Name</div>
+    <label className="input validator flex items-center gap-2 bg-white/5 px-4 py-2 rounded-md border border-white/10 focus-within:ring-2 focus-within:ring-cyan-400">
+      <svg className="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <g strokeLinejoin="round" strokeLinecap="round" strokeWidth="2.5" fill="none" stroke="currentColor">
+          <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+          <circle cx="12" cy="7" r="4" />
+        </g>
+      </svg>
+      <input
+        type="text"
+        placeholder="User"
+        className="name bg-transparent outline-none text-white placeholder-white/70 flex-1"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
+    </label>
+
+    {/* Email Input */}
+    <div className="mt-4 mb-2 text-sm sm:text-base font-medium text-white">Email</div>
+    <label className="input validator flex items-center gap-2 bg-white/5 px-4 py-2 rounded-md border border-white/10 focus-within:ring-2 focus-within:ring-cyan-400">
+      <svg className="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <g strokeLinejoin="round" strokeLinecap="round" strokeWidth="2.5" fill="none" stroke="currentColor">
+          <rect width="20" height="16" x="2" y="4" rx="2" />
+          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+        </g>
+      </svg>
+      <input
+        type="email"
+        placeholder="mail@site.com"
+        className="email bg-transparent outline-none text-white placeholder-white/70 flex-1"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+      />
+    </label>
+    <div className="validator-hint hidden text-sm text-red-400 mt-1">Enter valid email address</div>
+
+    {/* Message Input */}
+    <div className="mt-4 mb-2 text-sm sm:text-base font-medium text-white">Message</div>
+    <textarea
+      className="textarea validator message w-full min-h-[100px] p-3 bg-white/5 text-white placeholder-white/70 rounded-md border border-white/10 outline-none focus:ring-2 focus:ring-cyan-400"
+      placeholder="Hello! How are you?"
+      value={message}
+      onChange={(e) => setMessage(e.target.value)}
+    ></textarea>
+    <div className="validator-hint hidden text-sm text-red-400 mt-1">Enter a message</div>
+
+    {/* Submit Button */}
+    <button
+      type="submit"
+      className="btn btn-message mt-6 w-full sm:w-auto px-6 py-2 rounded-md border border-white/20 bg-white/10 text-white backdrop-blur-md hover:bg-white/20 transition flex items-center justify-center gap-2"
+    >
+      Send
+      <img src="/Icons/send.png" width={20} height={16} className="opacity-70 send" />
+    </button>
+  </form>
+</div>
     </div>
   );
 
