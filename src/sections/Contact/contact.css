@@ -21,10 +21,6 @@
   text-align: left;
 }
 
-#contact {
-  background: #f9f9f9 !important;
-}
-
 /* Form layout */
 .contact-form {
   display: flex;
