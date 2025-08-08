@@ -58,7 +58,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-     <div className="contact-form-container min-h-screen flex items-center justify-center bg-black p-6">
+     <div className="contact-form-container min-h-screen flex items-center justify-center p-6">
   <form
     className="contact-form w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto p-6 sm:p-10 rounded-xl shadow-2xl bg-white"
     onSubmit={handleSubmit}
