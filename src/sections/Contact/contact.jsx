@@ -64,7 +64,7 @@ const Contact = () => {
     onSubmit={handleSubmit}
   >
     {/* Name Input */}
-    <div className="mb-2 text-sm sm:text-base font-medium text-black">Name</div>
+    <div className="mb-2 text-sm sm:text-base font-medium text-white">Name</div>
     <label className="input validator flex items-center gap-2 bg-white px-4 py-2 rounded-md border border-black/20 focus-within:ring-2 focus-within:ring-black">
       <svg className="h-[1em] text-black opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
         <g strokeLinejoin="round" strokeLinecap="round" strokeWidth="2.5" fill="none" stroke="currentColor">
@@ -82,7 +82,7 @@ const Contact = () => {
     </label>
 
     {/* Email Input */}
-    <div className="mt-4 mb-2 text-sm sm:text-base font-medium text-black">Email</div>
+    <div className="mt-4 mb-2 text-sm sm:text-base font-medium text-white">Email</div>
     <label className="input validator flex items-center gap-2 bg-white px-4 py-2 rounded-md border border-black/20 focus-within:ring-2 focus-within:ring-black">
       <svg className="h-[1em] text-black opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
         <g strokeLinejoin="round" strokeLinecap="round" strokeWidth="2.5" fill="none" stroke="currentColor">
@@ -101,7 +101,7 @@ const Contact = () => {
     <div className="validator-hint hidden text-sm text-red-600 mt-1">Enter valid email address</div>
 
     {/* Message Input */}
-    <div className="mt-4 mb-2 text-sm sm:text-base font-medium text-black">Message</div>
+    <div className="mt-4 mb-2 text-sm sm:text-base font-medium text-white">Message</div>
     <textarea
       className="textarea validator message w-full min-h-[100px] p-3 bg-black tex—white placeholder-black/50 rounded-md border border-white/20 focus:ring-2 focus:ring-white"
       placeholder="Hello! How are you?"
