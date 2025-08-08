@@ -33,8 +33,8 @@
   background-color: #000;
   color: #fff;
   font-size: 1rem;
-  box-sizing: border-box;
-  background: linear-gradient(to right, darkblue, darkorchid) border-box;
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(to right, darkblue, darkorchid) border-box;
   border-radius: 50em;
   border: 4px solid transparent;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
