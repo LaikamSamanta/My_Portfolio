@@ -45,7 +45,7 @@ function App() {
             </div>
           </div>
         </section>
-        <section id="contact" className="flex items-center justify-center relative">
+        <section id="contact" className="flex items-center justify-center">
           <Contact />
         </section>
       </div>
