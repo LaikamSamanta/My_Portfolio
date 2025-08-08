@@ -35,11 +35,8 @@ export default function MyProjects() {
                 <h2 className="card-title">{project.title}</h2>
                 <p className="project-description">{project.description}</p>
                 <div className="project-tech">
-                  <img
-                    src={project.icon}
-                    alt={project.tech} />
-                  {project.tech.map((tech, index) => (
-                    <span key={index} className="tech-tag">{tech}</span>
+                  {project.tech.map((tech, index, icon) => (
+                    <span key={index} <img src={project.icon} /> className="tech-tag">{tech}</span>
                   ))}
                 </div>
                 <div className="card-actions justify-end">
