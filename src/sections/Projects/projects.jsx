@@ -37,6 +37,7 @@ export default function MyProjects() {
                 <div className="project-tech">
                   {project.tech.map((tech, index, icon) => (
                     <span key={index} img src={project.icon} className="tech-tag">{tech}</span>
+                    <img src={project.icon} />
                   ))}
                 </div>
                 <div className="card-actions justify-end">
