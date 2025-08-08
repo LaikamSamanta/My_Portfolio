@@ -36,8 +36,7 @@ export default function MyProjects() {
                 <p className="project-description">{project.description}</p>
                 <div className="project-tech">
                   {project.tech.map((tech, index, icon) => (
-                    <span key={index} img src={project.icon} className="tech-tag">{tech}</span>
-                    <img src={project.icon} />
+                    <span key={index} className="tech-tag"><img src={project.icon}{tech}</span></>
                   ))}
                 </div>
                 <div className="card-actions justify-end">
