@@ -25,10 +25,11 @@ export default function Hero() {
           <h1 className="font-bold title-name text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl tracking-tighter leading-tight">
             <span>Hi, I am <AuroraText>{user.title}</AuroraText></span>
           </h1>
-          <h1 className="py-4 sm:py-6 lg:py-8 text-sm sm:text-base lg:text-lg">{user.description}</h1>
+          <h2 className="py-4 sm:py-6 lg:py-8 text-sm sm:text-base lg:text-lg">{user.description}</h2>
         </div>
           <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 justify-center lg:justify-start">
             <button className="btn btn-secondary text-xs sm:text-sm lg:text-base">Contact me</button>
+            <h3 className="py-4 sm:py-6 lg:py-8 text-sm sm:text-base lg:text-lg">OR</h3>
           </div>
         </div>
       </div>
