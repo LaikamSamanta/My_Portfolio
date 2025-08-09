@@ -32,7 +32,7 @@ export default function Hero() {
             <h3 className="py-4 sm:py-6 lg:py-8 text-sm sm:text-base lg:text-lg">OR</h3>
             <div className="icons flex">
               <a href="https://github.com/LaikamSamanta" target="_blank" rel="noopener noreferrer">
-                <img src="/Icons/github.svg" alt="GitHub" className="w-6 h-6"/>
+                <img src="/Icons/github.svg" alt="GitHub" className="social-media w-6 h-6"/>
               </a>
               </div>
             </div>
