@@ -28,7 +28,6 @@ export default function Hero() {
           <h1 className="py-4 sm:py-6 lg:py-8 text-sm sm:text-base lg:text-lg">{user.description}</h1>
         </div>
           <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 justify-center lg:justify-start">
-            <button className="btn btn-primary text-xs sm:text-sm lg:text-base">Learn more about me</button>
             <button className="btn btn-secondary text-xs sm:text-sm lg:text-base">Contact me</button>
           </div>
         </div>
