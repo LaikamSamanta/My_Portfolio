@@ -58,68 +58,101 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-     <div className="contact-form-container min-h-screen flex items-center justify-center p-6">
-  <form
-    className="contact-form w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto p-6 sm:p-10 rounded-xl shadow-2xl bg-white"
-    onSubmit={handleSubmit}
-  >
-    {/* Name Input */}
-    <div className="mb-2 text-sm sm:text-base font-medium text-white">Name</div>
-    <label className="input validator flex items-center gap-2 bg-white px-4 py-2 rounded-md border border-black/20 focus-within:ring-2 focus-within:ring-black">
-      <svg className="h-[1em] text-black opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <g strokeLinejoin="round" strokeLinecap="round" strokeWidth="2.5" fill="none" stroke="currentColor">
-          <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
-          <circle cx="12" cy="7" r="4" />
-        </g>
-      </svg>
-      <input
-        type="text"
-        placeholder="User"
-        className="name bg-transparent outline-none text-black placeholder-black/50 flex-1"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-      />
-    </label>
+          <div className="min-h-screen flex items-center justify-center p-6">
+            <div className="relative w-full max-w-2xl">
+              {/* Background decoration */}
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 via-blue-500/20 to-purple-500/20 rounded-3xl blur-xl"></div>
+              
+              <form
+                className="relative bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl p-8 sm:p-12 shadow-2xl"
+                onSubmit={handleSubmit}
+              >
+                <div className="space-y-8">
+                  {/* Name Input */}
+                  <div className="group">
+                    <label className="block text-white font-medium text-sm mb-3 ml-1">
+                      Full Name
+                    </label>
+                    <div className="relative">
+                      <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                        <svg className="h-5 w-5 text-white/60 group-hover:text-white/80 transition-colors duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                        </svg>
+                      </div>
+                      <input
+                        type="text"
+                        placeholder="Enter your full name"
+                        className="w-full pl-12 pr-4 py-4 bg-white/5 border border-white/30 rounded-xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300 hover:bg-white/10"
+                        value={name || ''}
+                        onChange={(e) => setName(e.target.value)}
+                        required
+                      />
+                    </div>
+                  </div>
 
-    {/* Email Input */}
-    <div className="mt-4 mb-2 text-sm sm:text-base font-medium text-white">Email</div>
-    <label className="input validator flex items-center gap-2 bg-white px-4 py-2 rounded-md border border-black/20 focus-within:ring-2 focus-within:ring-black">
-      <svg className="h-[1em] text-black opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <g strokeLinejoin="round" strokeLinecap="round" strokeWidth="2.5" fill="none" stroke="currentColor">
-          <rect width="20" height="16" x="2" y="4" rx="2" />
-          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-        </g>
-      </svg>
-      <input
-        type="email"
-        placeholder="mail@site.com"
-        className="email bg-transparent outline-none text-white placeholder-white/50 flex-1"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
-    </label>
-    <div className="validator-hint hidden text-sm text-red-600 mt-1">Enter valid email address</div>
+                  {/* Email Input */}
+                  <div className="group">
+                    <label className="block text-white font-medium text-sm mb-3 ml-1">
+                      Email Address
+                    </label>
+                    <div className="relative">
+                      <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                        <svg className="h-5 w-5 text-white/60 group-hover:text-white/80 transition-colors duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                      </div>
+                      <input
+                        type="email"
+                        placeholder="your.email@example.com"
+                        className="w-full pl-12 pr-4 py-4 bg-white/5 border border-white/30 rounded-xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 hover:bg-white/10"
+                        value={email || ''}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                      />
+                    </div>
+                  </div>
 
-    {/* Message Input */}
-    <div className="mt-4 mb-2 text-sm sm:text-base font-medium text-white">Message</div>
-    <textarea
-      className="textarea validator message w-full min-h-[100px] p-3 bg-black tex—white placeholder-black/50 rounded-md border border-white/20 focus:ring-2 focus:ring-white"
-      placeholder="Hello! How are you?"
-      value={message}
-      onChange={(e) => setMessage(e.target.value)}
-    ></textarea>
-    <div className="validator-hint hidden text-sm text-red-600 mt-1">Enter a message</div>
+                  {/* Message Input */}
+                  <div className="group">
+                    <label className="block text-white font-medium text-sm mb-3 ml-1">
+                      Your Message
+                    </label>
+                    <div className="relative">
+                      <div className="absolute top-4 left-4 pointer-events-none">
+                        <svg className="h-5 w-5 text-white/60 group-hover:text-white/80 transition-colors duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                        </svg>
+                      </div>
+                      <textarea
+                        className="w-full pl-12 pr-4 py-4 pt-4 bg-white/5 border border-white/30 rounded-xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-300 hover:bg-white/10 min-h-[120px] resize-none"
+                        placeholder="Tell me about your project, ideas, or just say hello..."
+                        value={message || ''}
+                        onChange={(e) => setMessage(e.target.value)}
+                        required
+                      />
+                    </div>
+                  </div>
 
-    {/* Submit Button */}
-    <button
-      type="submit"
-      className="btn btn-message mt-6 w-full sm:w-auto px-6 py-2 rounded-md border border-white bg-white text-black hover:bg-black hover:text-white transition font-semibold"
-    >
-      Send
-      <img src="/Icons/send.png" width={20} height={16} className="opacity-70 send ml-2" />
-    </button>
-  </form>
-</div>
+                  {/* Submit Button */}
+                  <div className="pt-4">
+                    <button
+                      type="submit"
+                      className="group relative w-full overflow-hidden bg-gradient-to-r from-purple-600 via-blue-600 to-purple-700 text-white font-semibold py-4 px-8 rounded-xl shadow-xl hover:shadow-2xl transform hover:scale-[1.02] transition-all duration-500 ease-out border border-transparent hover:border-white/20"
+                    >
+                      <span className="relative z-10 flex items-center justify-center gap-3">
+                        <span>Send Message</span>
+                        <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                        </svg>
+                      </span>
+                      <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-700 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                      <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 via-blue-600 to-purple-700 rounded-xl blur opacity-30 group-hover:opacity-60 transition-opacity duration-500 animate-pulse"></div>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
 </div>
   );
 
