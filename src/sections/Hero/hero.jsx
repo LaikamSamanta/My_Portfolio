@@ -33,7 +33,6 @@ export default function Hero() {
             <div className="icons flex">
               <a href="https://github.com/LaikamSamanta">
                  <img src="/Icons/github.svg"></a>
-            </div>
           </div>
         </div>
       </div>
