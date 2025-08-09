@@ -35,6 +35,7 @@ export default function Hero() {
                  <img src="/Icons/github.svg">
               </a>
               </div>
+            </div>
           </div>
         </div>
       </div>
