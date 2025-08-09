@@ -34,10 +34,16 @@ export default function Hero() {
               <a href="https://github.com/LaikamSamanta" target="_blank" rel="noopener noreferrer">
                 <img src="/Icons/github.svg" alt="GitHub" className="social-media w-6 h-6"/>
               </a>
-              </div>
+              <a href="https://www.linkedin.com/in/samanta-biez%C4%93ka-0000000000/" target="_blank" rel="noopener noreferrer">
+                <img src="/Icons/linkedin.svg" alt="LinkedIn" className="social-media w-6 h-6"/>
+              </a>
+              <a href="https://www.instagram.com/samanta_biez_ka/" target="_blank" rel="noopener noreferrer">
+                <img src="/Icons/instagram.svg" alt="Instagram" className="social-media w-6 h-6"/>
+              </a>
             </div>
           </div>
         </div>
       </div>
+    </div>
   );
 }
