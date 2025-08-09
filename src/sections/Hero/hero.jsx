@@ -34,6 +34,7 @@ export default function Hero() {
               <a href="https://github.com/LaikamSamanta">
                  <img src="/Icons/github.svg">
               </a>
+              </div>
           </div>
         </div>
       </div>
