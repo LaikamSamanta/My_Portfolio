@@ -27,19 +27,71 @@ export default function Hero() {
           </h1>
           <h2 className="py-4 sm:py-6 lg:py-8 text-sm sm:text-base lg:text-lg">{user.description}</h2>
         </div>
-          <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 justify-center lg:justify-start">
-            <button className="btn btn-secondary text-xs sm:text-sm lg:text-base">Contact me</button>
-            <h3 className="py-4 sm:py-6 lg:py-8 text-sm sm:text-base lg:text-lg">OR</h3>
-            <div className="icons flex">
-              <a href="https://github.com/LaikamSamanta" target="_blank" rel="noopener noreferrer">
-                <img src="/Icons/github.svg" alt="GitHub" className="github w-6 h-6"/>
-              </a>
-              <a href="https://www.linkedin.com/in/samanta-biez%C4%93ka-0000000000/" target="_blank" rel="noopener noreferrer">
-                <img src="/Icons/linkedin.svg" alt="LinkedIn" className="linkedin w-6 h-6"/>
-              </a>
-              <a href="https://www.instagram.com/samanta_biez_ka/" target="_blank" rel="noopener noreferrer">
-                <img src="/Icons/instagram.svg" alt="Instagram" className="instagram w-6 h-6"/>
-              </a>
+          <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 items-center justify-center lg:justify-start">
+            <button className="btn btn-secondary text-xs sm:text-sm lg:text-base px-6 py-3 rounded-full hover:scale-105 transition-transform duration-300 shadow-lg">
+              Contact me
+            </button>
+            
+            <div className="flex items-center gap-2">
+              <div className="hidden sm:block w-12 h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent"></div>
+              <span className="text-sm sm:text-base text-gray-500 font-medium">OR</span>
+              <div className="hidden sm:block w-12 h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent"></div>
+            </div>
+            
+            <div className="flex items-center gap-4">
+              <span className="text-sm text-gray-600 font-medium">Follow me:</span>
+              <div className="flex gap-3">
+                <a 
+                  href="https://github.com/LaikamSamanta" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="group relative p-3 bg-white rounded-full shadow-md border border-gray-200 hover:shadow-lg hover:scale-110 transition-all duration-300 hover:border-gray-800"
+                  aria-label="Visit my GitHub profile"
+                >
+                  <img 
+                    src="/Icons/github.svg" 
+                    alt="GitHub" 
+                    className="w-5 h-5 group-hover:scale-110 transition-transform duration-300"
+                  />
+                  <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                    GitHub
+                  </div>
+                </a>
+                
+                <a 
+                  href="https://www.linkedin.com/in/samanta-biez%C4%93ka-0000000000/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="group relative p-3 bg-white rounded-full shadow-md border border-gray-200 hover:shadow-lg hover:scale-110 transition-all duration-300 hover:border-blue-600"
+                  aria-label="Visit my LinkedIn profile"
+                >
+                  <img 
+                    src="/Icons/linkedin.svg" 
+                    alt="LinkedIn" 
+                    className="w-5 h-5 group-hover:scale-110 transition-transform duration-300"
+                  />
+                  <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 bg-blue-600 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                    LinkedIn
+                  </div>
+                </a>
+                
+                <a 
+                  href="https://www.instagram.com/samanta_biez_ka/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="group relative p-3 bg-white rounded-full shadow-md border border-gray-200 hover:shadow-lg hover:scale-110 transition-all duration-300 hover:border-pink-500"
+                  aria-label="Visit my Instagram profile"
+                >
+                  <img 
+                    src="/Icons/instagram.svg" 
+                    alt="Instagram" 
+                    className="w-5 h-5 group-hover:scale-110 transition-transform duration-300"
+                  />
+                  <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                    Instagram
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
         </div>
