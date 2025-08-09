@@ -5,7 +5,7 @@ const user = {
   title: "SAMANTA BIEZĒKA",
   imageSrc: "/MyPhoto/Samanta.PNG",
   width: 250,
-  height: 300,
+  height: 280,
   occupation: "I am a Junior Web Developer. ",
   description: "I create responsive, user-friendly web applications with modern technologies. Let's build something amazing together.",
 };
