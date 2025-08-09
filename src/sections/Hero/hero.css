@@ -13,8 +13,8 @@
     height: 300px;
 }
 
-.social-media {
-    border: 1px solid white;
+button {
+    cursor: pointer;
 }
 
 /* Responsive Hero Section */
