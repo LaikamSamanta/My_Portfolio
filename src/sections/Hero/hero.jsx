@@ -6,7 +6,9 @@ const user = {
   imageSrc: "/MyPhoto/Samanta.PNG",
   width: 250,
   height: 300,
-  description: "I am a Junior Web Developer. ",
+  occupation: "I am a Junior Web Developer. ",
+  description: "I create responsive, user-friendly web applications with modern technologies. Let's build something amazing together.",
+  
 };
 
 export default function Hero() {
