@@ -98,7 +98,7 @@ export default function Hero() {
                 </a>
                 
                 <a 
-                  href="https://www.instagram.com/samanta_biez_ka/" 
+                  href="https://www.instagram.com/samis_codes?igsh=bzJoaHMzd2lob3Zn&utm_source=qr"
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="group relative p-3 bg-white rounded-full shadow-md border border-gray-200 hover:shadow-lg hover:scale-110 transition-all duration-300 hover:border-pink-500"
