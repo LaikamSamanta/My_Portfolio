@@ -4,8 +4,8 @@ import { AuroraText } from "../../Components/magicui/aurora-text";
 const user = {
   title: "SAMANTA BIEZĒKA",
   imageSrc: "/MyPhoto/Samanta.PNG",
-  width: 350,
-  height: 420,
+  width: 250,
+  height: 300,
   description: "I am a Junior Web Developer. ",
 };
 
@@ -34,7 +34,8 @@ export default function Hero() {
           <h1 className="font-bold title-name text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl tracking-tighter leading-tight">
             <span>Hi, I am <AuroraText>{user.title}</AuroraText></span>
           </h1>
-          <h2 className="py-4 sm:py-6 lg:py-8 text-sm sm:text-base lg:text-lg">{user.description}</h2>
+          <h1 className="py-4 sm:py-6 lg:py-8 text-sm sm:text-base lg:text-lg">{user.occupation}</h1>
+           <h2 className="py-4 sm:py-6 lg:py-8 text-sm sm:text-base lg:text-lg">{user.description}</h2>
         </div>
           <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 items-center justify-center lg:justify-start">
             <button 
