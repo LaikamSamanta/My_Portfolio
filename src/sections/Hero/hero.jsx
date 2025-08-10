@@ -4,21 +4,30 @@ import { AuroraText } from "../../Components/magicui/aurora-text";
 const user = {
   title: "SAMANTA BIEZĒKA",
   imageSrc: "/MyPhoto/Samanta.PNG",
-  width: 250,
-  height: 300,
+  width: 350,
+  height: 420,
   description: "I am a Junior Web Developer. ",
 };
 
 export default function Hero() {
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   return (
     <div className="hero bg-base-200 min-h-screen">
       <div className="hero-content flex-col lg:flex-row gap-4 sm:gap-6 lg:gap-8">
         <img
-          className="Samanta"
+          className="Samanta rounded-lg transition-all duration-500 hover:scale-105"
           src={user.imageSrc}
-          alt={"Photo of " + user.name}
-          style={{ width: user.width, height: user.height }}
-        ></img>
+          alt={"Photo of " + user.title}
+        />
         <div className="max-w-sm rounded-lg shadow-2xl" />
         <div className="text-center lg:text-left">
         <div className="container px-4 sm:px-6 lg:px-8">
@@ -28,7 +37,10 @@ export default function Hero() {
           <h2 className="py-4 sm:py-6 lg:py-8 text-sm sm:text-base lg:text-lg">{user.description}</h2>
         </div>
           <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 items-center justify-center lg:justify-start">
-            <button className="group relative overflow-hidden bg-gradient-to-r from-purple-600 via-blue-600 to-purple-700 text-white font-semibold text-xs sm:text-sm lg:text-base px-8 py-4 rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-500 ease-out border border-transparent hover:border-white/20">
+            <button 
+              onClick={scrollToContact}
+              className="group relative overflow-hidden bg-gradient-to-r from-purple-600 via-blue-600 to-purple-700 text-white font-semibold text-xs sm:text-sm lg:text-base px-8 py-4 rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-500 ease-out border border-transparent hover:border-white/20 cursor-pointer"
+            >
               <span className="relative z-10 flex items-center gap-2">
                 <span>Contact me</span>
                 <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
