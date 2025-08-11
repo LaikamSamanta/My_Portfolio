@@ -26,7 +26,7 @@ export default function Hero() {
     <div className="hero bg-base-200 min-h-screen">
       <div className="hero-content flex-col lg:flex-row gap-4 sm:gap-6 lg:gap-8">
         <img
-          className="Samanta rounded-lg transition-all duration-500 hover:scale-105"
+          className="Samanta rounded-lg"
           src={user.imageSrc}
           alt={"Photo of " + user.title}
         />
