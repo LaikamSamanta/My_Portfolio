@@ -6,11 +6,11 @@
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
     object-fit: cover;
     object-position: center;
-    margin-right: 10rem;
-    margin-left: 10rem;
-    margin-top: 10rem;
-    width: 230px;
-    height: 260px;
+    margin-right: 6rem;
+    margin-left: 6rem;
+    margin-top: 6rem;
+    width: 300px;
+    height: 340px;
 }
 
 button {
@@ -20,11 +20,11 @@ button {
 /* Responsive Hero Section */
 @media (max-width: 1024px) {
     .Samanta {
-        margin-right: 5rem;
-        margin-left: 5rem;
-        margin-top: 8rem;
-        width: 220px;
-        height: 270px;
+        margin-right: 4rem;
+        margin-left: 4rem;
+        margin-top: 6rem;
+        width: 280px;
+        height: 320px;
     }
 }
 
@@ -32,9 +32,9 @@ button {
     .Samanta {
         margin-right: 2rem;
         margin-left: 2rem;
-        margin-top: 6rem;
-        width: 180px;
-        height: 220px;
+        margin-top: 4rem;
+        width: 240px;
+        height: 280px;
     }
 }
 
@@ -42,9 +42,9 @@ button {
     .Samanta {
         margin-right: 1rem;
         margin-left: 1rem;
-        margin-top: 4rem;
-        width: 150px;
-        height: 180px;
+        margin-top: 3rem;
+        width: 200px;
+        height: 240px;
     }
 }
 
@@ -52,9 +52,9 @@ button {
     .Samanta {
         margin-right: 0.5rem;
         margin-left: 0.5rem;
-        margin-top: 3rem;
-        width: 120px;
-        height: 140px;
+        margin-top: 2rem;
+        width: 160px;
+        height: 200px;
     }
 }
 
