@@ -12,13 +12,9 @@ const About = () => {
               <p>
                 Hello! I'm <span className="highlight">Samanta</span>, a positive and creative 
                 <span className="highlight"> Junior Web Developer</span> with a love for building 
-                beautiful, functional, and maybe fun websites.
+                beautiful, functional, and fun websites.
               </p>
-              
-              <p>
-              I create responsive, user-friendly web applications with modern technologies.
-              Let's build something amazing together.
-              </p>
+              <p>Graduated from <span className="highlight">Riga Vocational School No. 3</span> During my internship at Organization "Kēfa" I developed a website for them with front-end <span className="highlight">HTML/CSS, JavaScript</span> and back-end <span className="highlight">PHP, MySQL</span>.</p>
         
             </div>
           </div>
