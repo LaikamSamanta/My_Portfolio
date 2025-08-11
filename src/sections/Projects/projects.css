@@ -151,13 +151,18 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  min-height: 24px;
 }
 
 .tech-icon {
   width: 16px;
   height: 16px;
   object-fit: contain;
-  filter: brightness(0) invert(1);
+  display: block !important;
+  background: transparent;
+  flex-shrink: 0;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 .tech-tag:hover {

@@ -12,6 +12,18 @@ html, body {
 
 .section-titles {
   font-size: 1.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  position: relative;
+  display: inline-block;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem 0;
+  border-bottom: 3px solid #ffffff;
+  text-align: center;
+  width: 100%;
 }
 
 .section-text {
@@ -19,6 +31,45 @@ html, body {
   margin-top: 10px;
   margin-bottom: 10px;
   line-height: 1.6;
+}
+
+/* Section container styling for better alignment */
+.section-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Enhanced section spacing */
+section {
+  position: relative;
+}
+
+section:not(#hero-section) {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ensure section titles are properly centered and visible */
+.section-titles {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  display: block !important;
+  width: 100% !important;
+  max-width: 600px;
+}
+
+/* Add some spacing between sections */
+section:not(#hero-section) + section:not(#hero-section) {
+  margin-top: 2rem;
 }
 
 .btn {
@@ -49,7 +100,10 @@ section {
   }
   
   .section-titles {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    padding: 0.75rem 0;
+    border-bottom-width: 4px;
   }
   
   .section-text {
@@ -64,7 +118,10 @@ section {
   }
   
   .section-titles {
-    font-size: 1.75rem;
+    font-size: 2rem;
+    margin-bottom: 1.75rem;
+    padding: 0.625rem 0;
+    border-bottom-width: 3px;
   }
   
   .section-text {
@@ -79,7 +136,10 @@ section {
   }
   
   .section-titles {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    padding: 0.5rem 0;
+    border-bottom-width: 3px;
   }
   
   .section-text {
@@ -94,7 +154,10 @@ section {
   }
   
   .section-titles {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+    padding: 0.375rem 0;
+    border-bottom-width: 2px;
   }
   
   .section-text {
@@ -111,7 +174,10 @@ section {
   }
   
   .section-titles {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    padding: 0.25rem 0;
+    border-bottom-width: 2px;
   }
   
   .section-text {

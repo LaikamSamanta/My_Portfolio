@@ -88,12 +88,6 @@ export default function Skills() {
       <div className="container px-4">
         <div className="grid grid-cols-12 justify-center mb-12">
           <div className="col-span-12 lg:col-span-6 lg:col-start-4 text-center px-4 py-8">
-            <h2 className="font-bold text-[18px] sm:text-[25px] lg:text-[35px] leading-none mb-6 px-4">
-              My technology stack
-            </h2>
-            <p className="text-sm sm:text-lg leading-6 opacity-70 px-4 py-2">
-              Showcasing the technologies I work with, organized by category.
-            </p>
           </div>
         </div>
 
