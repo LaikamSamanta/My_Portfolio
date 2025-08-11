@@ -6,6 +6,7 @@ import ClientLogo from "./sections/Skills/skills";
 import Contact from "./sections/Contact/contact";
 import MyProjects from "./sections/Projects/projects";
 import StarField from "./Components/generateStars";
+import About from "./sections/About/about";
 
 function App() {
   return (
@@ -22,9 +23,7 @@ function App() {
         <section id="about" className="flex items-center justify-center">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 max-w-6xl">
             <h2 className="section-titles text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 text-center sm:text-left px-4 py-2">About Me</h2>
-            <p className="section-text text-base sm:text-lg lg:text-xl text-center sm:text-left px-4 py-3">
-              This is the about section where you can write about yourself.
-            </p>
+            <About />
           </div>
         </section>
         <section id="skills" className="flex items-center justify-center">

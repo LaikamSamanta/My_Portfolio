@@ -43,11 +43,11 @@
       0 0 0 1px rgba(102, 126, 234, 0.1);
     object-fit: cover;
     object-position: center;
-    margin-right: 6rem;
-    margin-left: 6rem;
-    margin-top: 6rem;
-    width: 300px;
-    height: 340px;
+    margin: 2rem auto;
+    width: min(400px, 90vw);
+    height: min(450px, 90vh);
+    max-width: 100%;
+    max-height: 100%;
     border-radius: 20px;
     transition: all 0.3s ease;
 }
@@ -66,67 +66,59 @@ button {
 /* Responsive Hero Section */
 @media (max-width: 1024px) {
     .Samanta {
-        margin-right: 4rem;
-        margin-left: 4rem;
-        margin-top: 6rem;
-        width: 280px;
-        height: 320px;
+        width: min(350px, 85vw);
+        height: min(400px, 85vh);
+        margin: 1.5rem auto;
     }
 }
 
 @media (max-width: 768px) {
     .Samanta {
-        margin-right: 2rem;
-        margin-left: 2rem;
-        margin-top: 4rem;
-        width: 240px;
-        height: 280px;
+        width: min(300px, 80vw);
+        height: min(350px, 80vh);
+        margin: 1rem auto;
     }
 }
 
 @media (max-width: 640px) {
     .Samanta {
-        margin-right: 1rem;
-        margin-left: 1rem;
-        margin-top: 3rem;
-        width: 200px;
-        height: 240px;
+        width: min(250px, 75vw);
+        height: min(300px, 75vh);
+        margin: 1rem auto;
     }
 }
 
 @media (max-width: 480px) {
     .Samanta {
-        margin-right: 0.5rem;
-        margin-left: 0.5rem;
-        margin-top: 2rem;
-        width: 160px;
-        height: 200px;
+        width: min(200px, 70vw);
+        height: min(250px, 70vh);
+        margin: 0.5rem auto;
     }
 }
 
 /* Mobile height adjustments */
 @media (max-height: 700px) and (max-width: 768px) {
     .Samanta {
-        margin-top: 2rem;
-        width: 100px;
-        height: 120px;
+        width: min(120px, 25vw);
+        height: min(140px, 30vh);
+        margin: 1rem auto;
     }
 }
 
 @media (max-height: 600px) and (max-width: 768px) {
     .Samanta {
-        margin-top: 1rem;
-        width: 80px;
-        height: 100px;
+        width: min(100px, 20vw);
+        height: min(120px, 25vh);
+        margin: 0.5rem auto;
     }
 }
 
 /* Extra small mobile heights */
 @media (max-height: 500px) and (max-width: 768px) {
     .Samanta {
-        margin-top: 0.5rem;
-        width: 60px;
-        height: 80px;
+        width: min(80px, 15vw);
+        height: min(100px, 20vh);
+        margin: 0.5rem auto;
     }
 }
 

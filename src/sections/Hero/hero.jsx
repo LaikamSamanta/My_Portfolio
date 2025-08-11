@@ -6,8 +6,7 @@ const user = {
   imageSrc: "/MyPhoto/Samanta.PNG",
   width: 250,
   height: 300,
-  occupation: "I am a Junior Web Developer. ",
-  description: "I create responsive, user-friendly web applications with modern technologies. Let's build something amazing together.",
+  occupation: "Junior Web Developer. ",
   
 };
 
@@ -37,7 +36,6 @@ export default function Hero() {
             <span>Hi, I am <AuroraText>{user.title}</AuroraText></span>
           </h1>
           <h1 className="py-4 sm:py-6 lg:py-8 text-sm sm:text-base lg:text-lg">{user.occupation}</h1>
-           <h2 className="py-4 sm:py-6 lg:py-8 text-sm sm:text-base lg:text-lg">{user.description}</h2>
         </div>
           <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 items-center justify-center lg:justify-start">
             <button 
