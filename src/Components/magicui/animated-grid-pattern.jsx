@@ -13,7 +13,7 @@ export function AnimatedGridPattern({
   strokeDasharray = 0,
   numSquares = 50,
   className,
-  maxOpacity = 0.5,
+  maxOpacity = 0.4,
   duration = 4,
   repeatDelay = 0.5,
   ...props
@@ -86,14 +86,20 @@ export function AnimatedGridPattern({
       ref={containerRef}
       aria-hidden="true"
       className={cn(
-        "pointer-events-none absolute inset-0 h-full w-full fill-gray-400/30 stroke-gray-400/30",
+        "pointer-events-none absolute inset-0 h-full w-full",
         className,
       )}
       {...props}
     >
       <defs>
         <pattern id={id} width={width} height={height} patternUnits="userSpaceOnUse" x={x} y={y}>
-          <path d={`M.5 ${height}V.5H${width}`} fill="none" strokeDasharray={strokeDasharray} />
+          <path 
+            d={`M.5 ${height}V.5H${width}`} 
+            fill="none" 
+            strokeDasharray={strokeDasharray}
+            stroke="rgba(251, 146, 60, 0.3)"
+            strokeWidth="0.5"
+          />
         </pattern>
       </defs>
       <rect width="100%" height="100%" fill={`url(#${id})`} />
@@ -114,8 +120,9 @@ export function AnimatedGridPattern({
             height={height - 1}
             x={x * width + 1}
             y={y * height + 1}
-            fill="currentColor"
-            strokeWidth="0"
+            fill="rgba(239, 68, 68, 0.4)"
+            stroke="rgba(245, 158, 11, 0.25)"
+            strokeWidth="0.5"
           />
         ))}
       </svg>

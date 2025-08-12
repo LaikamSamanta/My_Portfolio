@@ -16,7 +16,7 @@ function App() {
         <Navbar />
       </div>
       <div className="sections">
-        <section id="hero-section" className="relative">
+        <section id="hero-section" className="relative bg-base-200 w-full">
             <AnimatedGridPattern className="animated-grid absolute inset-0 z-0" />
             <Hero />
         </section>

@@ -1,6 +1,21 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+/* Animated Grid Pattern Enhancements */
+.animated-grid {
+  filter: drop-shadow(0 0 20px rgba(251, 146, 60, 0.1));
+  mix-blend-mode: screen;
+}
+
+.animated-grid svg {
+  filter: drop-shadow(0 0 10px rgba(239, 68, 68, 0.2));
+}
+
+/* Enhanced grid animation */
+.animated-grid rect {
+  filter: drop-shadow(0 0 5px rgba(245, 158, 11, 0.3));
+}
+
 /* Modern Typography Styles */
 .title-name {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);

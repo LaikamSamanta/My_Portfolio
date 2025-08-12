@@ -22,7 +22,7 @@ export default function Hero() {
   };
 
   return (
-    <div className="hero bg-base-200 min-h-screen">
+    <div className="hero min-h-screen">
       <div className="hero-content flex-col lg:flex-row gap-4 sm:gap-6 lg:gap-8">
         <img
           className="Samanta rounded-lg"
