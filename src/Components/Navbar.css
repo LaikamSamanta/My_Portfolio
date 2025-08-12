@@ -35,11 +35,21 @@
   text-decoration: none;
   margin-right: 1rem;
   border: 1px solid var(--secondary-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .download:hover {
   background-color: #202020;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
 }
+
+.download:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+}
+
 .menu {
   color: var(--secondary-color);
 }

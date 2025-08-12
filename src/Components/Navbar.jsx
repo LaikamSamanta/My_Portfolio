@@ -1,6 +1,23 @@
+import { useState } from "react";
 import "./Navbar.css";
+import CVDownloadAlert from "./CVDownloadAlert";
 
 export default function Navbar() {
+  const [isCVAlertOpen, setIsCVAlertOpen] = useState(false);
+
+  const handleCVDownload = () => {
+    // Open the CV link in a new tab
+    window.open("https://drive.google.com/file/d/1is11TyqeB7cHAFGt3_KvWvsLSY2_TtXL/view?usp=sharing", "_blank");
+  };
+
+  const openCVAlert = () => {
+    setIsCVAlertOpen(true);
+  };
+
+  const closeCVAlert = () => {
+    setIsCVAlertOpen(false);
+  };
+
   return (
     <div className="navbar">
       <div className="navbar-start">
@@ -34,9 +51,15 @@ export default function Navbar() {
     </ul>
   </div>
   <div className="navbar-end">
-<a className="download btn btn-outline btn-neutral">CV<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="download-svg size-4">
+<a className="download btn btn-outline btn-neutral" onClick={openCVAlert}>CV<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="download-svg size-4">
   <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" /></svg></a>
   </div>
+  
+  <CVDownloadAlert 
+    isOpen={isCVAlertOpen}
+    onClose={closeCVAlert}
+    onConfirm={handleCVDownload}
+  />
 </div>
   );
 }
