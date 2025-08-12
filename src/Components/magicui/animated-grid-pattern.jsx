@@ -15,7 +15,6 @@ export function AnimatedGridPattern({
   className,
   maxOpacity = 0.4,
   duration = 4,
-  repeatDelay = 0.5,
   ...props
 }) {
   const id = useId()
@@ -97,7 +96,7 @@ export function AnimatedGridPattern({
             d={`M.5 ${height}V.5H${width}`} 
             fill="none" 
             strokeDasharray={strokeDasharray}
-            stroke="rgba(251, 146, 60, 0.3)"
+            stroke="rgba(147, 197, 253, 0.3)"
             strokeWidth="0.5"
           />
         </pattern>
@@ -120,8 +119,8 @@ export function AnimatedGridPattern({
             height={height - 1}
             x={x * width + 1}
             y={y * height + 1}
-            fill="rgba(239, 68, 68, 0.4)"
-            stroke="rgba(245, 158, 11, 0.25)"
+            fill="rgba(139, 92, 246, 0.2)"
+            stroke="rgba(34, 211, 238, 0.3)"
             strokeWidth="0.5"
           />
         ))}
