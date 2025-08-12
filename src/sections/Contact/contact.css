@@ -1,16 +1,18 @@
-/* Modern Black & White Contact Form */
+/* Modern Portfolio Theme Contact Form */
 .modern-contact-form {
-  background: #ffffff;
+  background: linear-gradient(135deg, rgba(147, 197, 253, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%);
   border-radius: 24px;
   padding: 3rem;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-  border: 2px solid #f0f0f0;
+  box-shadow: 0 20px 60px rgba(139, 92, 246, 0.1);
+  border: 2px solid rgba(147, 197, 253, 0.2);
   transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
 }
 
 .modern-contact-form:hover {
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.15);
-  border-color: #e0e0e0;
+  box-shadow: 0 30px 80px rgba(139, 92, 246, 0.15);
+  border-color: rgba(147, 197, 253, 0.3);
+  transform: translateY(-2px);
 }
 
 .form-content {
@@ -29,7 +31,7 @@
 .input-label {
   font-size: 0.875rem;
   font-weight: 600;
-  color: #1a1a1a;
+  color: #667eea;
   letter-spacing: 0.025em;
   text-transform: uppercase;
 }
@@ -58,7 +60,7 @@
 .icon {
   width: 1.25rem;
   height: 1.25rem;
-  color: #6b7280;
+  color: #8b5cf6;
   transition: color 0.3s ease;
 }
 
@@ -67,11 +69,11 @@
 .form-textarea {
   width: 100%;
   padding: 1rem 1rem 1rem 3rem;
-  border: 2px solid #e5e7eb;
+  border: 2px solid rgba(147, 197, 253, 0.3);
   border-radius: 12px;
   font-size: 1rem;
   color: #1a1a1a;
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.9);
   transition: all 0.3s ease;
   font-family: inherit;
 }
@@ -85,29 +87,31 @@
 
 .form-input::placeholder,
 .form-textarea::placeholder {
-  color: #9ca3af;
+  color: #8b5cf6;
   font-weight: 400;
+  opacity: 0.7;
 }
 
 /* Focus States */
 .form-input:focus,
 .form-textarea:focus {
   outline: none;
-  border-color: #000000;
-  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
   transform: translateY(-1px);
+  background: rgba(255, 255, 255, 1);
 }
 
 .form-input:focus + .input-icon .icon,
 .form-textarea:focus + .input-icon .icon {
-  color: #000000;
+  color: #667eea;
 }
 
 /* Hover States */
 .form-input:hover,
 .form-textarea:hover {
-  border-color: #d1d5db;
-  background: #fafafa;
+  border-color: rgba(139, 92, 246, 0.5);
+  background: rgba(255, 255, 255, 0.95);
 }
 
 /* Submit Section */
@@ -118,9 +122,9 @@
 .submit-button {
   width: 100%;
   padding: 1rem 2rem;
-  background: #000000;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: #ffffff;
-  border: 2px solid #000000;
+  border: 2px solid transparent;
   border-radius: 12px;
   font-size: 1rem;
   font-weight: 600;
@@ -131,10 +135,9 @@
 }
 
 .submit-button:hover {
-  background: #ffffff;
-  color: #000000;
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
   transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3);
 }
 
 .submit-button:active {

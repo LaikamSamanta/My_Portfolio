@@ -4,13 +4,87 @@ import { useState } from "react";
 
 const Contact = () => {
   // Reference to the form
-  const [name, setName] = useState();
-  const [email, setEmail] = useState();
-  const [message, setMessage] = useState();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [emailValid, setEmailValid] = useState(null); // null = not checked, true = valid, false = invalid
+  const [nameValid, setNameValid] = useState(null);
+  const [messageValid, setMessageValid] = useState(null);
+  const [touched, setTouched] = useState({ name: false, email: false, message: false });
+
+  // Email validation function
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  // Name validation function
+  const validateName = (name) => {
+    return name.trim().length >= 2;
+  };
+
+  // Message validation function
+  const validateMessage = (message) => {
+    return message.trim().length >= 10;
+  };
+
+  // Handle name input change with validation
+  const handleNameChange = (e) => {
+    const nameValue = e.target.value;
+    setName(nameValue);
+    
+    if (nameValue === "") {
+      setNameValid(null);
+    } else {
+      setNameValid(validateName(nameValue));
+    }
+  };
+
+  // Handle email input change with validation
+  const handleEmailChange = (e) => {
+    const emailValue = e.target.value;
+    setEmail(emailValue);
+    
+    if (emailValue === "") {
+      setEmailValid(null);
+    } else {
+      setEmailValid(validateEmail(emailValue));
+    }
+  };
+
+  // Handle message input change with validation
+  const handleMessageChange = (e) => {
+    const messageValue = e.target.value;
+    setMessage(messageValue);
+    
+    if (messageValue === "") {
+      setMessageValid(null);
+    } else {
+      setMessageValid(validateMessage(messageValue));
+    }
+  };
+
+  // Handle input blur (when user leaves the field)
+  const handleBlur = (field) => {
+    setTouched(prev => ({ ...prev, [field]: true }));
+  };
+
+  // Check if form is valid
+  const isFormValid = () => {
+    return nameValid === true && emailValid === true && messageValid === true;
+  };
 
   // Form submission handler
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Mark all fields as touched
+    setTouched({ name: true, email: true, message: true });
+
+    // Check if all fields are valid before submitting
+    if (!isFormValid()) {
+      return;
+    }
 
     const serviceID = "service_lozxiag";
     const templateID = "template_b5tv958";
@@ -36,6 +110,10 @@ const Contact = () => {
       setName("");
       setEmail("");
       setMessage("");
+      setEmailValid(null);
+      setNameValid(null);
+      setMessageValid(null);
+      setTouched({ name: false, email: false, message: false });
     } catch (error) {
       alert("Error sending email:", error);
     }
@@ -79,12 +157,50 @@ const Contact = () => {
                       <input
                         type="text"
                         placeholder="Enter your full name"
-                        className="form-input"
-                        value={name || ''}
-                        onChange={(e) => setName(e.target.value)}
+                        className={`form-input ${
+                          nameValid === true 
+                            ? 'border-green-500 bg-green-50' 
+                            : nameValid === false && touched.name
+                            ? 'border-red-500 bg-red-50' 
+                            : ''
+                        }`}
+                        value={name}
+                        onChange={handleNameChange}
+                        onBlur={() => handleBlur('name')}
                         required
                       />
+                      {/* Name validation icon */}
+                      {nameValid === true && (
+                        <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
+                          <svg className="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                          </svg>
+                        </div>
+                      )}
+                      {nameValid === false && touched.name && (
+                        <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
+                          <svg className="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                          </svg>
+                        </div>
+                      )}
                     </div>
+                    {nameValid === false && touched.name && (
+                      <p className="text-red-500 text-xs mt-1 flex items-center gap-1">
+                        <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        Name must be at least 2 characters long.
+                      </p>
+                    )}
+                    {nameValid === true && (
+                      <p className="text-green-500 text-xs mt-1 flex items-center gap-1">
+                        <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        Name looks good!
+                      </p>
+                    )}
                   </div>
 
                   {/* Email Input */}
@@ -101,12 +217,50 @@ const Contact = () => {
                       <input
                         type="email"
                         placeholder="your.email@example.com"
-                        className="form-input"
-                        value={email || ''}
-                        onChange={(e) => setEmail(e.target.value)}
+                        className={`form-input ${
+                          emailValid === true 
+                            ? 'border-green-500 bg-green-50' 
+                            : emailValid === false && touched.email
+                            ? 'border-red-500 bg-red-50' 
+                            : ''
+                        }`}
+                        value={email}
+                        onChange={handleEmailChange}
+                        onBlur={() => handleBlur('email')}
                         required
                       />
+                      {/* Email validation icon */}
+                      {emailValid === true && (
+                        <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
+                          <svg className="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                          </svg>
+                        </div>
+                      )}
+                      {emailValid === false && touched.email && (
+                        <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
+                          <svg className="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                          </svg>
+                        </div>
+                      )}
                     </div>
+                    {emailValid === false && touched.email && (
+                      <p className="text-red-500 text-xs mt-1 flex items-center gap-1">
+                        <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        Please enter a valid email address.
+                      </p>
+                    )}
+                    {emailValid === true && (
+                      <p className="text-green-500 text-xs mt-1 flex items-center gap-1">
+                        <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        Email looks good!
+                      </p>
+                    )}
                   </div>
 
                   {/* Message Input */}
@@ -121,13 +275,51 @@ const Contact = () => {
                         </svg>
                       </div>
                       <textarea
-                        className="form-textarea"
+                        className={`form-textarea ${
+                          messageValid === true 
+                            ? 'border-green-500 bg-green-50' 
+                            : messageValid === false && touched.message
+                            ? 'border-red-500 bg-red-50' 
+                            : ''
+                        }`}
                         placeholder="Tell me about your project, ideas, or just say hello..."
-                        value={message || ''}
-                        onChange={(e) => setMessage(e.target.value)}
+                        value={message}
+                        onChange={handleMessageChange}
+                        onBlur={() => handleBlur('message')}
                         required
                       />
+                      {/* Message validation icon */}
+                      {messageValid === true && (
+                        <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
+                          <svg className="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                          </svg>
+                        </div>
+                      )}
+                      {messageValid === false && touched.message && (
+                        <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
+                          <svg className="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                          </svg>
+                        </div>
+                      )}
                     </div>
+                    {messageValid === false && touched.message && (
+                      <p className="text-red-500 text-xs mt-1 flex items-center gap-1">
+                        <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        Message must be at least 10 characters long.
+                      </p>
+                    )}
+                    {messageValid === true && (
+                      <p className="text-green-500 text-xs mt-1 flex items-center gap-1">
+                        <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        Message looks good!
+                      </p>
+                    )}
                   </div>
 
                   {/* Submit Button */}
