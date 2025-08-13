@@ -102,11 +102,11 @@ export function AnimatedGridPattern({
     }
   }, [containerRef])
 
-  // Mobile-friendly colors and opacity - force higher values for mobile
-  const gridStrokeColor = isMobile ? "rgba(147, 197, 253, 0.8)" : "rgba(147, 197, 253, 0.6)"
-  const squareFillColor = isMobile ? "rgba(139, 92, 246, 0.7)" : "rgba(139, 92, 246, 0.5)"
-  const squareStrokeColor = isMobile ? "rgba(34, 211, 238, 0.8)" : "rgba(34, 211, 238, 0.6)"
-  const mobileOpacity = isMobile ? 0.9 : 0.7
+  // Mobile-friendly colors and opacity - matching website theme
+  const gridStrokeColor = isMobile ? "rgba(255, 255, 255, 0.4)" : "rgba(255, 255, 255, 0.5)"
+  const squareFillColor = isMobile ? "rgba(147, 51, 234, 0.3)" : "rgba(147, 51, 234, 0.4)"
+  const squareStrokeColor = isMobile ? "rgba(59, 130, 246, 0.4)" : "rgba(59, 130, 246, 0.5)"
+  const mobileOpacity = isMobile ? 0.8 : 0.7
 
   // Debug log for opacity values
   console.log('Mobile state:', isMobile, 'Opacity:', mobileOpacity, 'Colors:', { gridStrokeColor, squareFillColor, squareStrokeColor })

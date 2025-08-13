@@ -3,58 +3,58 @@
 
 /* Animated Grid Pattern Enhancements */
 .animated-grid {
-  filter: drop-shadow(0 0 20px rgba(251, 146, 60, 0.3));
+  filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.2));
   mix-blend-mode: screen;
 }
 
 .animated-grid svg {
-  filter: drop-shadow(0 0 10px rgba(239, 68, 68, 0.4));
+  filter: drop-shadow(0 0 10px rgba(147, 51, 234, 0.3));
 }
 
 /* Enhanced grid animation */
 .animated-grid rect {
-  filter: drop-shadow(0 0 5px rgba(245, 158, 11, 0.5));
+  filter: drop-shadow(0 0 5px rgba(59, 130, 246, 0.4));
 }
 
 /* Mobile-specific grid adjustments */
 @media (max-width: 768px) {
   .animated-grid {
-    filter: drop-shadow(0 0 10px rgba(251, 146, 60, 0.2));
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.15));
   }
   
   .animated-grid svg {
-    filter: drop-shadow(0 0 5px rgba(239, 68, 68, 0.3));
+    filter: drop-shadow(0 0 5px rgba(147, 51, 234, 0.25));
   }
   
   .animated-grid rect {
-    filter: drop-shadow(0 0 3px rgba(245, 158, 11, 0.4));
-    opacity: 0.9 !important; /* Force higher opacity on mobile */
+    filter: drop-shadow(0 0 3px rgba(59, 130, 246, 0.3));
+    opacity: 0.8 !important; /* Force higher opacity on mobile */
   }
   
   /* Ensure grid lines are visible on mobile */
   .animated-grid pattern path {
-    stroke-opacity: 0.8 !important;
+    stroke-opacity: 0.4 !important;
   }
 }
 
 /* Extra small mobile adjustments */
 @media (max-width: 480px) {
   .animated-grid {
-    filter: drop-shadow(0 0 5px rgba(251, 146, 60, 0.15));
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.1));
   }
   
   .animated-grid svg {
-    filter: drop-shadow(0 0 3px rgba(239, 68, 68, 0.2));
+    filter: drop-shadow(0 0 3px rgba(147, 51, 234, 0.2));
   }
   
   .animated-grid rect {
-    filter: drop-shadow(0 0 2px rgba(245, 158, 11, 0.3));
-    opacity: 0.95 !important; /* Even higher opacity on small screens */
+    filter: drop-shadow(0 0 2px rgba(59, 130, 246, 0.25));
+    opacity: 0.85 !important; /* Even higher opacity on small screens */
   }
   
   /* Ensure grid lines are very visible on small screens */
   .animated-grid pattern path {
-    stroke-opacity: 0.9 !important;
+    stroke-opacity: 0.5 !important;
   }
 }
 
