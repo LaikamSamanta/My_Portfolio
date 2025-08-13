@@ -33,9 +33,14 @@ export function AnimatedGridPattern({
   useEffect(() => {
     const checkMobile = () => {
       const width = window.innerWidth
-      const isMobileDevice = width <= 768
+      const userAgent = navigator.userAgent.toLowerCase()
+      
+      // Check both screen width and user agent for better mobile detection
+      const isMobileDevice = width <= 768 || 
+                           /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent)
+      
       setIsMobile(isMobileDevice)
-      console.log('Mobile detected:', isMobileDevice, 'Width:', width, 'Opacity will be:', isMobileDevice ? 0.8 : 0.7)
+      console.log('Mobile detected:', isMobileDevice, 'Width:', width, 'UserAgent:', userAgent, 'Opacity will be:', isMobileDevice ? 0.9 : 0.7)
     }
     
     // Check immediately
@@ -44,6 +49,10 @@ export function AnimatedGridPattern({
     // Add event listeners
     window.addEventListener('resize', checkMobile)
     window.addEventListener('orientationchange', checkMobile)
+    
+    // Also check on load and after a short delay to catch any timing issues
+    setTimeout(checkMobile, 100)
+    setTimeout(checkMobile, 500)
     
     return () => {
       window.removeEventListener('resize', checkMobile)
@@ -103,10 +112,10 @@ export function AnimatedGridPattern({
   }, [containerRef])
 
   // Mobile-friendly colors and opacity - matching website theme
-  const gridStrokeColor = isMobile ? "rgba(255, 255, 255, 0.4)" : "rgba(255, 255, 255, 0.5)"
-  const squareFillColor = isMobile ? "rgba(147, 51, 234, 0.3)" : "rgba(147, 51, 234, 0.4)"
-  const squareStrokeColor = isMobile ? "rgba(59, 130, 246, 0.4)" : "rgba(59, 130, 246, 0.5)"
-  const mobileOpacity = isMobile ? 0.8 : 0.7
+  const gridStrokeColor = isMobile ? "rgba(255, 255, 255, 0.6)" : "rgba(255, 255, 255, 0.5)"
+  const squareFillColor = isMobile ? "rgba(147, 51, 234, 0.6)" : "rgba(147, 51, 234, 0.4)"
+  const squareStrokeColor = isMobile ? "rgba(59, 130, 246, 0.6)" : "rgba(59, 130, 246, 0.5)"
+  const mobileOpacity = isMobile ? 0.9 : 0.7
 
   // Debug log for opacity values
   console.log('Mobile state:', isMobile, 'Opacity:', mobileOpacity, 'Colors:', { gridStrokeColor, squareFillColor, squareStrokeColor })
@@ -119,6 +128,12 @@ export function AnimatedGridPattern({
         "pointer-events-none absolute inset-0 h-full w-full",
         className,
       )}
+      style={{
+        '--mobile-opacity': mobileOpacity,
+        '--grid-stroke': gridStrokeColor,
+        '--square-fill': squareFillColor,
+        '--square-stroke': squareStrokeColor,
+      }}
       {...props}
     >
       <defs>
