@@ -16,6 +16,36 @@
   filter: drop-shadow(0 0 5px rgba(245, 158, 11, 0.3));
 }
 
+/* Mobile-specific grid adjustments */
+@media (max-width: 768px) {
+  .animated-grid {
+    filter: drop-shadow(0 0 10px rgba(251, 146, 60, 0.05));
+  }
+  
+  .animated-grid svg {
+    filter: drop-shadow(0 0 5px rgba(239, 68, 68, 0.1));
+  }
+  
+  .animated-grid rect {
+    filter: drop-shadow(0 0 3px rgba(245, 158, 11, 0.2));
+  }
+}
+
+/* Extra small mobile adjustments */
+@media (max-width: 480px) {
+  .animated-grid {
+    filter: drop-shadow(0 0 5px rgba(251, 146, 60, 0.03));
+  }
+  
+  .animated-grid svg {
+    filter: drop-shadow(0 0 3px rgba(239, 68, 68, 0.05));
+  }
+  
+  .animated-grid rect {
+    filter: drop-shadow(0 0 2px rgba(245, 158, 11, 0.1));
+  }
+}
+
 /* Modern Typography Styles */
 .title-name {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);

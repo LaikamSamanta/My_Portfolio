@@ -21,6 +21,7 @@ export function AnimatedGridPattern({
   const containerRef = useRef(null)
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 })
   const [squares, setSquares] = useState(() => generateSquares(numSquares))
+  const [isMobile, setIsMobile] = useState(false)
 
   function getPos() {
     return [
@@ -28,6 +29,18 @@ export function AnimatedGridPattern({
       Math.floor((Math.random() * dimensions.height) / height),
     ]
   }
+
+  // Check if device is mobile
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768)
+    }
+    
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
 
   // Adjust the generateSquares function to return objects with an id, x, and y
   function generateSquares(count) {
@@ -80,6 +93,12 @@ export function AnimatedGridPattern({
     }
   }, [containerRef])
 
+  // Mobile-friendly colors
+  const gridStrokeColor = isMobile ? "rgba(147, 197, 253, 0.15)" : "rgba(147, 197, 253, 0.3)"
+  const squareFillColor = isMobile ? "rgba(139, 92, 246, 0.1)" : "rgba(139, 92, 246, 0.2)"
+  const squareStrokeColor = isMobile ? "rgba(34, 211, 238, 0.15)" : "rgba(34, 211, 238, 0.3)"
+  const mobileOpacity = isMobile ? 0.25 : maxOpacity
+
   return (
     <svg
       ref={containerRef}
@@ -96,7 +115,7 @@ export function AnimatedGridPattern({
             d={`M.5 ${height}V.5H${width}`} 
             fill="none" 
             strokeDasharray={strokeDasharray}
-            stroke="rgba(147, 197, 253, 0.3)"
+            stroke={gridStrokeColor}
             strokeWidth="0.5"
           />
         </pattern>
@@ -106,7 +125,7 @@ export function AnimatedGridPattern({
         {squares.map(({ pos: [x, y], id }, index) => (
           <motion.rect
             initial={{ opacity: 0 }}
-            animate={{ opacity: maxOpacity }}
+            animate={{ opacity: mobileOpacity }}
             transition={{
               duration,
               repeat: 1,
@@ -119,8 +138,8 @@ export function AnimatedGridPattern({
             height={height - 1}
             x={x * width + 1}
             y={y * height + 1}
-            fill="rgba(139, 92, 246, 0.2)"
-            stroke="rgba(34, 211, 238, 0.3)"
+            fill={squareFillColor}
+            stroke={squareStrokeColor}
             strokeWidth="0.5"
           />
         ))}
