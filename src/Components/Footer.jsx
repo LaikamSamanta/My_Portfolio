@@ -23,7 +23,7 @@ export default function Footer() {
                GitHub
              </a>
              <a 
-               href="https://linkedin.com/in/your-profile" 
+               href="https://www.linkedin.com/in/samanta-biez%C4%93ka-0000000000/" 
                target="_blank" 
                rel="noopener noreferrer"
                className="social-link"
@@ -32,7 +32,7 @@ export default function Footer() {
                LinkedIn
              </a>
              <a 
-               href="https://instagram.com/your-profile" 
+               href="https://www.instagram.com/samis_codes?igsh=bzJoaHMzd2lob3Zn&utm_source=qr" 
                target="_blank" 
                rel="noopener noreferrer"
                className="social-link"
