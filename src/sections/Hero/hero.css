@@ -5,6 +5,7 @@
 .animated-grid {
   filter: drop-shadow(0 0 20px rgba(251, 146, 60, 0.3));
   mix-blend-mode: screen;
+  opacity: 50%;
 }
 
 .animated-grid svg {
