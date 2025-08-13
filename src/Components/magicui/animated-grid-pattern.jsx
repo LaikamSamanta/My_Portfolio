@@ -21,7 +21,6 @@ export function AnimatedGridPattern({
   const containerRef = useRef(null)
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 })
   const [squares, setSquares] = useState(() => generateSquares(numSquares))
-  const [isMobile, setIsMobile] = useState(false)
 
   function getPos() {
     return [
@@ -29,18 +28,6 @@ export function AnimatedGridPattern({
       Math.floor((Math.random() * dimensions.height) / height),
     ]
   }
-
-  // Check if device is mobile
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768)
-    }
-    
-    checkMobile()
-    window.addEventListener('resize', checkMobile)
-    
-    return () => window.removeEventListener('resize', checkMobile)
-  }, [])
 
   // Adjust the generateSquares function to return objects with an id, x, and y
   function generateSquares(count) {
@@ -93,11 +80,10 @@ export function AnimatedGridPattern({
     }
   }, [containerRef])
 
-  // Mobile-friendly colors - Updated to calm, soothing colors
-  const gridStrokeColor = isMobile ? "rgba(134, 163, 152, 0.4)" : "rgba(134, 163, 152, 0.6)" // Sage green
-  const squareFillColor = isMobile ? "rgba(183, 201, 226, 0.3)" : "rgba(183, 201, 226, 0.5)" // Soft lavender
-  const squareStrokeColor = isMobile ? "rgba(176, 196, 222, 0.4)" : "rgba(176, 196, 222, 0.6)" // Light steel blue
-  const mobileOpacity = isMobile ? 0.5 : 0.7
+  // Colors
+  const gridStrokeColor = "rgba(134, 163, 152, 0.6)" // Sage green
+  const squareFillColor = "rgba(183, 201, 226, 0.5)" // Soft lavender
+  const squareStrokeColor = "rgba(176, 196, 222, 0.6)" // Light steel blue
 
   return (
     <svg
@@ -125,7 +111,7 @@ export function AnimatedGridPattern({
         {squares.map(({ pos: [x, y], id }, index) => (
           <motion.rect
             initial={{ opacity: 0 }}
-            animate={{ opacity: mobileOpacity }}
+            animate={{ opacity: 0.7 }}
             transition={{
               duration,
               repeat: 1,
