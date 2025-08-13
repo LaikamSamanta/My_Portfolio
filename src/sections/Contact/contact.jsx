@@ -11,6 +11,8 @@ const Contact = () => {
   const [nameValid, setNameValid] = useState(null);
   const [messageValid, setMessageValid] = useState(null);
   const [touched, setTouched] = useState({ name: false, email: false, message: false });
+  const [showSuccess, setShowSuccess] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   // Email validation function
   const validateEmail = (email) => {
@@ -86,6 +88,9 @@ const Contact = () => {
       return;
     }
 
+    setIsSubmitting(true);
+    setShowSuccess(false);
+
     const serviceID = "service_lozxiag";
     const templateID = "template_b5tv958";
     const publicKey = "C02XStaeYHlRYt0z5";
@@ -102,11 +107,15 @@ const Contact = () => {
     };
 
     try {
-      const response = await axios.post(
+      await axios.post(
         "https://api.emailjs.com/api/v1.0/email/send",
         data
       );
-      alert("Email sent successfully:", response.data);
+      
+      // Show success message
+      setShowSuccess(true);
+      
+      // Reset form
       setName("");
       setEmail("");
       setMessage("");
@@ -114,8 +123,17 @@ const Contact = () => {
       setNameValid(null);
       setMessageValid(null);
       setTouched({ name: false, email: false, message: false });
+      
+      // Hide success message after 5 seconds
+      setTimeout(() => {
+        setShowSuccess(false);
+      }, 5000);
+      
     } catch (error) {
-      alert("Error sending email:", error);
+      console.error("Error sending email:", error);
+      // You could add error state handling here if needed
+    } finally {
+      setIsSubmitting(false);
     }
   }
 
@@ -322,17 +340,37 @@ const Contact = () => {
                     )}
                   </div>
 
+                  {/* Success Message */}
+                  {showSuccess && (
+                    <div className="success-message">
+                      <div className="success-content">
+                        <svg className="success-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Thank you, your message has been sent!</span>
+                      </div>
+                    </div>
+                  )}
+
                   {/* Submit Button */}
                   <div className="submit-section">
                     <button
                       type="submit"
                       className="submit-button"
+                      disabled={isSubmitting}
                     >
                       <span className="button-content">
-                        <span>Send Message</span>
-                        <svg className="button-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                        </svg>
+                        <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
+                        {!isSubmitting && (
+                          <svg className="button-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                          </svg>
+                        )}
+                        {isSubmitting && (
+                          <svg className="button-icon animate-spin" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                          </svg>
+                        )}
                       </span>
                     </button>
                   </div>

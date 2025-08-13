@@ -48,10 +48,10 @@ export default function Footer() {
           <div className="contact-info">
             <p className="contact-item">
               <span className="contact-icon">📧</span>
-              <a href="mailto:samanta@example.com">samanta@example.com</a>
+              <a href="mailto:samantabiezeka@gmail.com">samantabiezeka@gmail.com</a>
             </p>
             <p className="contact-item">
-              <span className="contact-icon">📍</span>
+              <span className="contact-icon"><img src="/Icons/latvia.png" alt="Location" className="social-icon" /></span>
               <span>Latvia</span>
             </p>
           </div>
@@ -61,7 +61,7 @@ export default function Footer() {
       <div className="footer-bottom">
         <div className="footer-divider"></div>
         <p className="copyright">
-          © {currentYear} Samanta. All rights reserved.
+          © {currentYear} Samanta Biezēka. All rights reserved.
         </p>
       </div>
     </footer>
