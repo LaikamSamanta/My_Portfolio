@@ -64,8 +64,9 @@
 }
 
 .see-more-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
+  background: linear-gradient(135deg, #6b7ceb 0%, #7a4fa3 100%);
 }
 
 .see-more-btn:active {
@@ -166,8 +167,9 @@
 }
 
 .tech-tag:hover {
-  transform: scale(1.05);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+  box-shadow: 0 1px 4px rgba(102, 126, 234, 0.2);
+  background: linear-gradient(135deg, #6b7ceb 0%, #7a4fa3 100%);
 }
 
 /* Card Actions */
@@ -181,6 +183,16 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  border: none;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.card-actions .btn:hover {
+  background: linear-gradient(135deg, #6b7ceb 0%, #7a4fa3 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(139, 92, 246, 0.2);
 }
 
 .github-icon {
@@ -392,10 +404,13 @@
 
 /* Hover Effects */
 .project-card .card {
-  border: 1px solid rgba(240, 232, 232, 0.925);
+  border: 1px solid rgba(102, 126, 234, 0.2);
   transition: all 0.3s ease;
+  background: rgba(15, 23, 42, 0.9);
 }
 
 .project-card .card:hover {
-  border-color: rgba(102, 126, 234, 0.3);
+  border-color: rgba(102, 126, 234, 0.25);
+  background: rgba(25, 35, 55, 0.92);
+  box-shadow: 0 4px 16px rgba(102, 126, 234, 0.1);
 }
