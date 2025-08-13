@@ -7,6 +7,7 @@ import Contact from "./sections/Contact/contact";
 import MyProjects from "./sections/Projects/projects";
 import StarField from "./Components/generateStars";
 import About from "./sections/About/about";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
@@ -48,6 +49,7 @@ function App() {
           </div>
         </section>
       </div>
+      <Footer />
     </>
   );
 }
