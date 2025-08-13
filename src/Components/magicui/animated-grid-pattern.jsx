@@ -94,10 +94,10 @@ export function AnimatedGridPattern({
   }, [containerRef])
 
   // Mobile-friendly colors
-  const gridStrokeColor = isMobile ? "rgba(147, 197, 253, 0.15)" : "rgba(147, 197, 253, 0.3)"
-  const squareFillColor = isMobile ? "rgba(139, 92, 246, 0.1)" : "rgba(139, 92, 246, 0.2)"
-  const squareStrokeColor = isMobile ? "rgba(34, 211, 238, 0.15)" : "rgba(34, 211, 238, 0.3)"
-  const mobileOpacity = isMobile ? 0.25 : maxOpacity
+  const gridStrokeColor = isMobile ? "rgba(147, 197, 253, 0.4)" : "rgba(147, 197, 253, 0.6)"
+  const squareFillColor = isMobile ? "rgba(139, 92, 246, 0.3)" : "rgba(139, 92, 246, 0.5)"
+  const squareStrokeColor = isMobile ? "rgba(34, 211, 238, 0.4)" : "rgba(34, 211, 238, 0.6)"
+  const mobileOpacity = isMobile ? 0.5 : 0.7
 
   return (
     <svg

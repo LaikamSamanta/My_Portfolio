@@ -3,46 +3,46 @@
 
 /* Animated Grid Pattern Enhancements */
 .animated-grid {
-  filter: drop-shadow(0 0 20px rgba(251, 146, 60, 0.1));
+  filter: drop-shadow(0 0 20px rgba(251, 146, 60, 0.3));
   mix-blend-mode: screen;
 }
 
 .animated-grid svg {
-  filter: drop-shadow(0 0 10px rgba(239, 68, 68, 0.2));
+  filter: drop-shadow(0 0 10px rgba(239, 68, 68, 0.4));
 }
 
 /* Enhanced grid animation */
 .animated-grid rect {
-  filter: drop-shadow(0 0 5px rgba(245, 158, 11, 0.3));
+  filter: drop-shadow(0 0 5px rgba(245, 158, 11, 0.5));
 }
 
 /* Mobile-specific grid adjustments */
 @media (max-width: 768px) {
   .animated-grid {
-    filter: drop-shadow(0 0 10px rgba(251, 146, 60, 0.05));
+    filter: drop-shadow(0 0 10px rgba(251, 146, 60, 0.2));
   }
   
   .animated-grid svg {
-    filter: drop-shadow(0 0 5px rgba(239, 68, 68, 0.1));
+    filter: drop-shadow(0 0 5px rgba(239, 68, 68, 0.3));
   }
   
   .animated-grid rect {
-    filter: drop-shadow(0 0 3px rgba(245, 158, 11, 0.2));
+    filter: drop-shadow(0 0 3px rgba(245, 158, 11, 0.4));
   }
 }
 
 /* Extra small mobile adjustments */
 @media (max-width: 480px) {
   .animated-grid {
-    filter: drop-shadow(0 0 5px rgba(251, 146, 60, 0.03));
+    filter: drop-shadow(0 0 5px rgba(251, 146, 60, 0.15));
   }
   
   .animated-grid svg {
-    filter: drop-shadow(0 0 3px rgba(239, 68, 68, 0.05));
+    filter: drop-shadow(0 0 3px rgba(239, 68, 68, 0.2));
   }
   
   .animated-grid rect {
-    filter: drop-shadow(0 0 2px rgba(245, 158, 11, 0.1));
+    filter: drop-shadow(0 0 2px rgba(245, 158, 11, 0.3));
   }
 }
 
