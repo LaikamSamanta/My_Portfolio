@@ -93,10 +93,10 @@ export function AnimatedGridPattern({
     }
   }, [containerRef])
 
-  // Mobile-friendly colors
-  const gridStrokeColor = isMobile ? "rgba(147, 197, 253, 0.4)" : "rgba(147, 197, 253, 0.6)"
-  const squareFillColor = isMobile ? "rgba(139, 92, 246, 0.3)" : "rgba(139, 92, 246, 0.5)"
-  const squareStrokeColor = isMobile ? "rgba(34, 211, 238, 0.4)" : "rgba(34, 211, 238, 0.6)"
+  // Mobile-friendly colors - Updated to calm, soothing colors
+  const gridStrokeColor = isMobile ? "rgba(134, 163, 152, 0.4)" : "rgba(134, 163, 152, 0.6)" // Sage green
+  const squareFillColor = isMobile ? "rgba(183, 201, 226, 0.3)" : "rgba(183, 201, 226, 0.5)" // Soft lavender
+  const squareStrokeColor = isMobile ? "rgba(176, 196, 222, 0.4)" : "rgba(176, 196, 222, 0.6)" // Light steel blue
   const mobileOpacity = isMobile ? 0.5 : 0.7
 
   return (
