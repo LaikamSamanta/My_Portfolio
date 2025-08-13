@@ -28,6 +28,12 @@
   
   .animated-grid rect {
     filter: drop-shadow(0 0 3px rgba(245, 158, 11, 0.4));
+    opacity: 0.9 !important; /* Force higher opacity on mobile */
+  }
+  
+  /* Ensure grid lines are visible on mobile */
+  .animated-grid pattern path {
+    stroke-opacity: 0.8 !important;
   }
 }
 
@@ -43,6 +49,12 @@
   
   .animated-grid rect {
     filter: drop-shadow(0 0 2px rgba(245, 158, 11, 0.3));
+    opacity: 0.95 !important; /* Even higher opacity on small screens */
+  }
+  
+  /* Ensure grid lines are very visible on small screens */
+  .animated-grid pattern path {
+    stroke-opacity: 0.9 !important;
   }
 }
 

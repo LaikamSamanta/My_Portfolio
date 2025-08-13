@@ -13,7 +13,6 @@ export function AnimatedGridPattern({
   strokeDasharray = 0,
   numSquares = 50,
   className,
-  maxOpacity = 0.4,
   duration = 4,
   ...props
 }) {
@@ -33,13 +32,23 @@ export function AnimatedGridPattern({
   // Check if device is mobile
   useEffect(() => {
     const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768)
+      const width = window.innerWidth
+      const isMobileDevice = width <= 768
+      setIsMobile(isMobileDevice)
+      console.log('Mobile detected:', isMobileDevice, 'Width:', width, 'Opacity will be:', isMobileDevice ? 0.8 : 0.7)
     }
     
+    // Check immediately
     checkMobile()
-    window.addEventListener('resize', checkMobile)
     
-    return () => window.removeEventListener('resize', checkMobile)
+    // Add event listeners
+    window.addEventListener('resize', checkMobile)
+    window.addEventListener('orientationchange', checkMobile)
+    
+    return () => {
+      window.removeEventListener('resize', checkMobile)
+      window.removeEventListener('orientationchange', checkMobile)
+    }
   }, [])
 
   // Adjust the generateSquares function to return objects with an id, x, and y
@@ -93,11 +102,14 @@ export function AnimatedGridPattern({
     }
   }, [containerRef])
 
-  // Mobile-friendly colors
-  const gridStrokeColor = isMobile ? "rgba(147, 197, 253, 0.4)" : "rgba(147, 197, 253, 0.6)"
-  const squareFillColor = isMobile ? "rgba(139, 92, 246, 0.3)" : "rgba(139, 92, 246, 0.5)"
-  const squareStrokeColor = isMobile ? "rgba(34, 211, 238, 0.4)" : "rgba(34, 211, 238, 0.6)"
-  const mobileOpacity = isMobile ? 0.5 : 0.7
+  // Mobile-friendly colors and opacity - force higher values for mobile
+  const gridStrokeColor = isMobile ? "rgba(147, 197, 253, 0.8)" : "rgba(147, 197, 253, 0.6)"
+  const squareFillColor = isMobile ? "rgba(139, 92, 246, 0.7)" : "rgba(139, 92, 246, 0.5)"
+  const squareStrokeColor = isMobile ? "rgba(34, 211, 238, 0.8)" : "rgba(34, 211, 238, 0.6)"
+  const mobileOpacity = isMobile ? 0.9 : 0.7
+
+  // Debug log for opacity values
+  console.log('Mobile state:', isMobile, 'Opacity:', mobileOpacity, 'Colors:', { gridStrokeColor, squareFillColor, squareStrokeColor })
 
   return (
     <svg
