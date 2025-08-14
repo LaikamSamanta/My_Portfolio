@@ -33,7 +33,6 @@ html, body {
   line-height: 1.6;
 }
 
-/* Section container styling for better alignment */
 .section-container {
   display: flex;
   flex-direction: column;
@@ -44,7 +43,6 @@ html, body {
   padding: 0 1rem;
 }
 
-/* Enhanced section spacing */
 section {
   position: relative;
 }
@@ -57,7 +55,6 @@ section:not(#hero-section) {
   align-items: center;
 }
 
-/* Ensure section titles are properly centered and visible */
 .section-titles {
   text-align: center !important;
   margin-left: auto !important;
@@ -67,7 +64,6 @@ section:not(#hero-section) {
   max-width: 600px;
 }
 
-/* Add some spacing between sections */
 section:not(#hero-section) + section:not(#hero-section) {
   margin-top: 2rem;
 }
@@ -93,7 +89,6 @@ section {
 }
 
 /* Enhanced Responsive Design */
-/* Large screens */
 @media (min-width: 1025px) {
   section {
     padding: 12vh 5vw 3vh 5vw;
@@ -111,7 +106,6 @@ section {
   }
 }
 
-/* Medium screens */
 @media (max-width: 1024px) and (min-width: 769px) {
   section {
     padding: 12vh 4vw 3vh 4vw;
@@ -129,7 +123,6 @@ section {
   }
 }
 
-/* Tablet screens */
 @media (max-width: 768px) and (min-width: 641px) {
   section {
     padding: 10vh 3vw 2vh 3vw;
@@ -147,7 +140,6 @@ section {
   }
 }
 
-/* Mobile screens */
 @media (max-width: 640px) {
   section {
     padding: 8vh 2vw 2vh 2vw;
@@ -167,7 +159,6 @@ section {
   }
 }
 
-/* Small mobile screens */
 @media (max-width: 480px) {
   section {
     padding: 6vh 1.5vw 1vh 1.5vw;
@@ -187,7 +178,6 @@ section {
   }
 }
 
-/* Mobile height adjustments */
 @media (max-height: 700px) and (max-width: 768px) {
   section {
     padding: 6vh 2vw 1vh 2vw;
@@ -220,23 +210,6 @@ section {
   }
 }
 
-/* Extra small mobile heights */
-@media (max-height: 500px) and (max-width: 768px) {
-  section {
-    padding: 3vh 2vw 0.5vh 2vw;
-  }
-  
-  .section-titles {
-    font-size: 1rem;
-  }
-  
-  .section-text {
-    font-size: 0.7rem;
-    margin-top: 3px;
-    margin-bottom: 3px;
-  }
-}
-
 #hero-section {
   justify-content: center;
   align-items: center;
@@ -244,7 +217,6 @@ section {
   padding: 2vh 2vw;
 }
 
-/* Responsive hero section */
 @media (max-width: 768px) {
   #hero-section {
     padding: 1vh 1vw;
@@ -270,7 +242,6 @@ section {
   margin: 0 auto;
 }
 
-/* Enhanced Container Responsive Design */
 @media (max-width: 640px) {
   .container {
     padding: 0.25rem;
@@ -289,7 +260,6 @@ section {
   }
 }
 
-/* Ensure content sections have proper overflow handling on mobile */
 @media (max-width: 768px) {
   #projects .container,
   #skills .container {
@@ -305,21 +275,18 @@ section {
   }
 }
 
-/* Additional responsive improvements for better mobile experience */
 @media (max-width: 480px) {
   .container {
     padding: 0.125rem;
   }
   
-  /* Improve touch targets on mobile */
   .btn {
     padding: 0.5em 1em;
     font-size: 0.8rem;
-    min-height: 44px; /* Minimum touch target size */
+    min-height: 44px;
   }
 }
 
-/* Landscape mobile adjustments */
 @media (max-height: 500px) and (orientation: landscape) {
   section {
     padding: 2vh 2vw 0.5vh 2vw;

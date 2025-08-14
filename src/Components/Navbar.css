@@ -24,10 +24,9 @@
 }
 
 .navbar.scrolled {
-  box-shadow: 0 10px 60px rgba(164, 125, 255, 0.25); /* light nebula glow */
+  box-shadow: 0 10px 60px rgba(164, 125, 255, 0.25);
   border-color: rgba(255, 255, 255, 0.15);
 }
-
 
 .download {
   color: var(--secondary-color);

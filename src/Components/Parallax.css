@@ -24,9 +24,11 @@
 .stars {
   animation: animStar 150s linear infinite;
 }
+
 .stars2 {
   animation: animStar 100s linear infinite;
 }
+
 .stars3 {
   animation: animStar 50s linear infinite;
 }
