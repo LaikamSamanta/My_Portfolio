@@ -14,14 +14,14 @@ html, body {
   font-size: 1.5rem;
   font-weight: 800;
   color: #ffffff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  text-shadow: 2px 2px 4px rgba(139, 92, 246, 0.3);
   position: relative;
   display: inline-block;
   letter-spacing: -0.02em;
   line-height: 1.2;
   margin-bottom: 1.5rem;
   padding: 0.5rem 0;
-  border-bottom: 3px solid #ffffff;
+  border-bottom: 3px solid #8b5cf6;
   text-align: center;
   width: 100%;
 }
@@ -31,6 +31,7 @@ html, body {
   margin-top: 10px;
   margin-bottom: 10px;
   line-height: 1.6;
+  color: #e9ecef;
 }
 
 .section-container {
@@ -74,6 +75,16 @@ section:not(#hero-section) + section:not(#hero-section) {
   font-size: 0.85rem;
   cursor: pointer;
   transition: all 0.2s ease;
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  color: #ffffff;
+  border: none;
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4);
 }
 
 section {
@@ -228,8 +239,6 @@ section {
     padding: 0.5vh 0.5vw;
   }
 }
-
-
 
 .container {
   width: 100%;

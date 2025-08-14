@@ -2,52 +2,52 @@
 @plugin "daisyui";
 
 .animated-grid {
-  filter: drop-shadow(0 0 20px rgba(251, 146, 60, 0.3));
+  filter: drop-shadow(0 0 20px rgba(139, 92, 246, 0.3));
   mix-blend-mode: screen;
 }
 
 .animated-grid svg {
-  filter: drop-shadow(0 0 10px rgba(239, 68, 68, 0.4));
+  filter: drop-shadow(0 0 10px rgba(124, 58, 237, 0.4));
 }
 
 .animated-grid rect {
-  filter: drop-shadow(0 0 5px rgba(245, 158, 11, 0.5));
+  filter: drop-shadow(0 0 5px rgba(109, 40, 217, 0.5));
 }
 
 @media (max-width: 768px) {
   .animated-grid {
-    filter: drop-shadow(0 0 10px rgba(251, 146, 60, 0.2));
+    filter: drop-shadow(0 0 10px rgba(139, 92, 246, 0.2));
   }
   
   .animated-grid svg {
-    filter: drop-shadow(0 0 5px rgba(239, 68, 68, 0.3));
+    filter: drop-shadow(0 0 5px rgba(124, 58, 237, 0.3));
   }
   
   .animated-grid rect {
-    filter: drop-shadow(0 0 3px rgba(245, 158, 11, 0.4));
+    filter: drop-shadow(0 0 3px rgba(109, 40, 217, 0.4));
   }
 }
 
 @media (max-width: 480px) {
   .animated-grid {
-    filter: drop-shadow(0 0 5px rgba(251, 146, 60, 0.15));
+    filter: drop-shadow(0 0 5px rgba(139, 92, 246, 0.15));
   }
   
   .animated-grid svg {
-    filter: drop-shadow(0 0 3px rgba(239, 68, 68, 0.2));
+    filter: drop-shadow(0 0 3px rgba(124, 58, 237, 0.2));
   }
   
   .animated-grid rect {
-    filter: drop-shadow(0 0 2px rgba(245, 158, 11, 0.3));
+    filter: drop-shadow(0 0 2px rgba(109, 40, 217, 0.3));
   }
 }
 
 .title-name {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-shadow: 0 4px 8px rgba(139, 92, 246, 0.3);
   font-feature-settings: "liga" 1, "kern" 1;
 }
 
@@ -74,10 +74,10 @@
 }
 
 .Samanta {
-    border: 2px solid rgba(102, 126, 234, 0.2);
+    border: 2px solid rgba(139, 92, 246, 0.3);
     box-shadow: 
-      0 20px 40px rgba(0, 0, 0, 0.1),
-      0 0 0 1px rgba(102, 126, 234, 0.1);
+      0 20px 40px rgba(0, 0, 0, 0.3),
+      0 0 0 1px rgba(139, 92, 246, 0.2);
     object-fit: cover;
     object-position: center;
     margin: 2rem auto;
@@ -92,8 +92,8 @@
 .Samanta:hover {
     transform: translateY(-5px);
     box-shadow: 
-      0 25px 50px rgba(0, 0, 0, 0.15),
-      0 0 0 2px rgba(102, 126, 234, 0.2);
+      0 25px 50px rgba(0, 0, 0, 0.4),
+      0 0 0 2px rgba(139, 92, 246, 0.4);
 }
 
 button {
@@ -165,7 +165,7 @@ button {
 .hero a[href*="linkedin"]:hover,
 .hero a[href*="instagram"]:hover {
     transform: translateY(-2px) scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 20px rgba(139, 92, 246, 0.3);
 }
 
 .hero * {

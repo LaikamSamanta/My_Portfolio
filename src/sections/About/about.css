@@ -1,7 +1,7 @@
 .about-section {
   padding: 100px 0;
   background: transparent;
-  color: #1e293b;
+  color: #ffffff;
   position: relative;
   overflow: hidden;
 }
@@ -29,18 +29,19 @@
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 30px;
-  color: #1e293b;
+  color: #ffffff;
+  text-shadow: 0 2px 8px rgba(139, 92, 246, 0.3);
 }
 
 .about-description p {
   font-size: 1.1rem;
   line-height: 1.8;
   margin-bottom: 20px;
-  color: #fdfeff;
+  color: #e9ecef;
 }
 
 .highlight {
-  color: #3b82f6;
+  color: #8b5cf6;
   font-weight: 600;
 }
 
@@ -52,10 +53,10 @@
   position: relative;
   border-radius: 20px;
   overflow: hidden;
-  border: 2px solid rgba(34, 197, 94, 0.2);
+  border: 2px solid rgba(139, 92, 246, 0.3);
   box-shadow: 
-    0 20px 40px rgba(0, 0, 0, 0.1),
-    0 0 0 1px rgba(34, 197, 94, 0.1);
+    0 20px 40px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(139, 92, 246, 0.2);
   transition: all 0.3s ease;
   width: min(400px, 90vw);
   height: min(450px, 90vh);
@@ -67,8 +68,8 @@
 .image-container:hover {
   transform: translateY(-5px);
   box-shadow: 
-    0 25px 50px rgba(0, 0, 0, 0.15),
-    0 0 0 2px rgba(34, 197, 94, 0.2);
+    0 25px 50px rgba(0, 0, 0, 0.4),
+    0 0 0 2px rgba(139, 92, 246, 0.4);
 }
 
 .profile-photo {
@@ -84,7 +85,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(45deg, rgba(59, 130, 246, 0.2), rgba(99, 102, 241, 0.2));
+  background: linear-gradient(45deg, rgba(139, 92, 246, 0.2), rgba(124, 58, 237, 0.2));
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -116,12 +117,12 @@
 .location-text {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #fcfdff;
+  color: #ffffff;
 }
 
 .age-text {
   font-size: 1rem;
-  color: #fcfdff;
+  color: #e9ecef;
   font-weight: 500;
 }
 

@@ -47,7 +47,7 @@
 }
 
 .see-more-btn {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
   color: white;
   border: none;
   padding: 0.75rem 2rem;
@@ -56,13 +56,13 @@
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
 }
 
 .see-more-btn:hover {
   transform: translateY(-1px);
-  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
-  background: linear-gradient(135deg, #6b7ceb 0%, #7a4fa3 100%);
+  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4);
+  background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
 }
 
 .see-more-btn:active {
@@ -121,7 +121,7 @@
 }
 
 .project-description {
-  color: #ffffff;
+  color: #e9ecef;
   line-height: 1.6;
   margin-bottom: 1rem;
   font-size: 0.9rem;
@@ -135,7 +135,7 @@
 }
 
 .tech-tag {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
   color: white;
   padding: 0.25rem 0.75rem;
   border-radius: 15px;
@@ -161,8 +161,8 @@
 
 .tech-tag:hover {
   transform: scale(1.02);
-  box-shadow: 0 1px 4px rgba(102, 126, 234, 0.2);
-  background: linear-gradient(135deg, #6b7ceb 0%, #7a4fa3 100%);
+  box-shadow: 0 2px 8px rgba(139, 92, 246, 0.3);
+  background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
 }
 
 .card-actions {
@@ -175,16 +175,16 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
   border: none;
   color: white;
   transition: all 0.3s ease;
 }
 
 .card-actions .btn:hover {
-  background: linear-gradient(135deg, #6b7ceb 0%, #7a4fa3 100%);
+  background: linear-gradient(135deg, #6d28d9 0%, #5b21b6 100%);
   transform: translateY(-1px);
-  box-shadow: 0 2px 8px rgba(139, 92, 246, 0.2);
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
 }
 
 .github-icon {
@@ -391,13 +391,13 @@
 }
 
 .project-card .card {
-  border: 1px solid rgba(102, 126, 234, 0.2);
+  border: 1px solid rgba(139, 92, 246, 0.3);
   transition: all 0.3s ease;
-  background: rgba(15, 23, 42, 0.9);
+  background: rgba(10, 10, 10, 0.9);
 }
 
 .project-card .card:hover {
-  border-color: rgba(102, 126, 234, 0.25);
-  background: rgba(25, 35, 55, 0.92);
-  box-shadow: 0 4px 16px rgba(102, 126, 234, 0.1);
+  border-color: rgba(139, 92, 246, 0.4);
+  background: rgba(26, 26, 26, 0.92);
+  box-shadow: 0 4px 16px rgba(139, 92, 246, 0.2);
 }
