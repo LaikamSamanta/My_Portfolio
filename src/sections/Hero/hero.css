@@ -51,6 +51,20 @@
   font-feature-settings: "liga" 1, "kern" 1;
 }
 
+/* Style for the "Hi, I am" text to make it white */
+.title-name span {
+  color: #ffffff;
+  -webkit-text-fill-color: #ffffff;
+}
+
+/* Ensure the name (AuroraText) keeps its gradient */
+.title-name .aurora-text {
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 .hero h1, .hero h2, .hero p, .hero span {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
