@@ -10,6 +10,92 @@ html, body {
   height: 100%;
 }
 
+/* LIGHT MODE */
+@media (prefers-color-scheme: light) {
+  .sparkles {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  /* Soft radial mask */
+  -webkit-mask-image: radial-gradient(50% 50%, #E5E7EB, transparent);
+  mask-image: radial-gradient(50% 50%, #E5E7EB, transparent);
+  background: #000000;
+}
+
+.sparkles::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at bottom center, #6600ff);
+  opacity: 0.30;
+}
+
+.sparkles::after {
+  content: "";
+  position: absolute;
+  top: 75%;
+  left: -50%;
+  aspect-ratio: 1 / 0.7;
+  width: 200%;
+  border-radius: 100%;
+  border-top: 1px solid rgba(120, 120, 150, 0.5);
+  background: #E5E7EB;
+}
+
+.navbar {
+  border-radius: 100px;
+  background: rgba(211, 211, 211, 0.9);
+  box-shadow: 0 8px 24px rgba(139, 92, 246, 0.15);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  top: 1rem;
+  width:70%;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 1.5rem;
+  color: #000000;
+}
+
+.download {
+  color: var(--secondary-color);
+  background-color: var(--main-color);
+  text-decoration: none;
+  margin-right: 1rem;
+  border: 1px solid var(--secondary-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.download:hover {
+  background-color: #1a1a1a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(139, 92, 246, 0.2);
+}
+
+.download:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.2);
+}
+
+.menu {
+  color: var(--secondary-color);
+}
+
+.menu-drop {
+  background-color: var(--main-color);
+  color: var(--secondary-color);
+}
+
+}
+
 .section-titles {
   font-size: 1.5rem;
   font-weight: 800;
