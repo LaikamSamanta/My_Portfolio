@@ -6,6 +6,10 @@
   margin: 0;
 }
 
+html {
+  color-scheme: only dark;
+}
+
 html, body {
   height: 100%;
 }
