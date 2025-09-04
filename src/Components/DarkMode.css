@@ -781,7 +781,7 @@ body {
 /* SECTION TITLES */
 .dark .section-titles {
   color: #202020;
-  text-shadow: 2px 2px 4px rgba(139, 92, 246, 0.3);
+  text-shadow: 2px 2px 4px rgba(246, 92, 233, 0.3);
   border-bottom: 3px solid rgba(255, 124, 227, 0.9);
 }
 
