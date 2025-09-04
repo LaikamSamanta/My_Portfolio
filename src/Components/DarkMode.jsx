@@ -6,18 +6,16 @@ const DarkMode = () => {
   const darkTheme = "dark";
   const clickedClass = "clicked";
 
-  // Always prefer saved theme, default to dark (ignores browser preference)
-  const [theme, setTheme] = useState(() => {
-    const savedTheme = localStorage.getItem("theme");
-    return savedTheme || darkTheme;
-  });
+  // Always start with light theme
+  const [theme, setTheme] = useState(lightTheme);
 
   useEffect(() => {
-    // Apply theme immediately on mount
-    const savedTheme = localStorage.getItem("theme") || darkTheme;
+    // Always apply light theme on mount
     document.body.classList.remove(lightTheme, darkTheme);
-    document.body.classList.add(savedTheme);
-    setTheme(savedTheme);
+    document.body.classList.add(lightTheme);
+    setTheme(lightTheme);
+    // Save light theme as default
+    localStorage.setItem("theme", lightTheme);
   }, []);
 
   useEffect(() => {
