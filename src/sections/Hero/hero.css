@@ -1,47 +1,6 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
-.animated-grid {
-  filter: drop-shadow(0 0 20px rgba(139, 92, 246, 0.3));
-  mix-blend-mode: screen;
-}
-
-.animated-grid svg {
-  filter: drop-shadow(0 0 10px rgba(124, 58, 237, 0.4));
-}
-
-.animated-grid rect {
-  filter: drop-shadow(0 0 5px rgba(109, 40, 217, 0.5));
-}
-
-@media (max-width: 768px) {
-  .animated-grid {
-    filter: drop-shadow(0 0 10px rgba(139, 92, 246, 0.2));
-  }
-  
-  .animated-grid svg {
-    filter: drop-shadow(0 0 5px rgba(124, 58, 237, 0.3));
-  }
-  
-  .animated-grid rect {
-    filter: drop-shadow(0 0 3px rgba(109, 40, 217, 0.4));
-  }
-}
-
-@media (max-width: 480px) {
-  .animated-grid {
-    filter: drop-shadow(0 0 5px rgba(139, 92, 246, 0.15));
-  }
-  
-  .animated-grid svg {
-    filter: drop-shadow(0 0 3px rgba(124, 58, 237, 0.2));
-  }
-  
-  .animated-grid rect {
-    filter: drop-shadow(0 0 2px rgba(109, 40, 217, 0.3));
-  }
-}
-
 .title-name {
   background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
   -webkit-background-clip: text;
@@ -112,6 +71,16 @@
 
 button {
     cursor: pointer;
+}
+
+.follow-me {
+  color: #868686;
+  text-shadow: 0 2px 4px rgba(246, 92, 233, 0.3);
+}
+
+.or {
+  color: #868686;
+  text-shadow: 0 2px 4px rgba(246, 92, 233, 0.3);
 }
 
 @media (max-width: 1024px) {

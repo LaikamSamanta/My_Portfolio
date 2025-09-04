@@ -38,37 +38,6 @@
   }
 }
 
-.see-more-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 1.5rem;
-  padding: 0 1rem;
-}
-
-.see-more-btn {
-  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
-  color: white;
-  border: none;
-  padding: 0.75rem 2rem;
-  border-radius: 25px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
-}
-
-.see-more-btn:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4);
-  background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
-}
-
-.see-more-btn:active {
-  transform: translateY(0);
-}
-
 .project-card {
   width: 100%;
   transition: transform 0.3s ease;
@@ -125,6 +94,7 @@
   line-height: 1.6;
   margin-bottom: 1rem;
   font-size: 0.9rem;
+  text-shadow: 0 2px 4px rgba(197, 92, 246, 0.418);
 }
 
 .project-tech {
@@ -135,7 +105,7 @@
 }
 
 .tech-tag {
-  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.7), rgba(124, 58, 237, 0.295));
   color: white;
   padding: 0.25rem 0.75rem;
   border-radius: 15px;
@@ -162,7 +132,7 @@
 .tech-tag:hover {
   transform: scale(1.02);
   box-shadow: 0 2px 8px rgba(139, 92, 246, 0.3);
-  background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.7), rgba(124, 58, 237, 0.295));
 }
 
 .card-actions {
@@ -175,14 +145,14 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.7), rgba(124, 58, 237, 0.295));
   border: none;
   color: white;
   transition: all 0.3s ease;
 }
 
 .card-actions .btn:hover {
-  background: linear-gradient(135deg, #6d28d9 0%, #5b21b6 100%);
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.7), rgba(124, 58, 237, 0.295));
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
 }
@@ -388,16 +358,17 @@
   font-weight: 600;
   margin-bottom: 0.75rem;
   color: #ffffff;
+  text-shadow: 0 2px 4px rgba(220, 92, 246, 0.3);
 }
 
 .project-card .card {
   border: 1px solid rgba(139, 92, 246, 0.3);
   transition: all 0.3s ease;
-  background: rgba(10, 10, 10, 0.9);
+  background: rgba(10, 10, 10, 0.6);
 }
 
 .project-card .card:hover {
   border-color: rgba(139, 92, 246, 0.4);
-  background: rgba(26, 26, 26, 0.92);
+  background: rgba(26, 26, 26, 0.9);
   box-shadow: 0 4px 16px rgba(139, 92, 246, 0.2);
 }

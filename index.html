@@ -4,13 +4,20 @@
     <meta charset="UTF-8" />
     <link type="image/png" rel="icon" href="../favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="color-scheme" content="light dark">
+    <meta name="color-scheme" content="none">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link href="index.css" rel="stylesheet">
     <title>Portfolio</title>
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      // Apply theme immediately to prevent flash
+      (function() {
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        document.body.classList.add(savedTheme);
+      })();
+    </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

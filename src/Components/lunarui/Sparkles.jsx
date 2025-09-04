@@ -6,12 +6,12 @@ import { loadSlim } from "@tsparticles/slim"
 
 export function Sparkles({
   className,
-  size = 1,
+  size = 2,
   minSize = null,
-  density = 800,
+  density = 1000,
   speed = 1,
   minSpeed = null,
-  opacity = 1,
+  opacity = 2,
   opacitySpeed = 3,
   minOpacity = null,
   color = "#FFFFFF",

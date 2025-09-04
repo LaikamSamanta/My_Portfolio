@@ -110,6 +110,7 @@
   gap: 0.75rem;
   color: #e9ecef;
   font-size: 0.9rem;
+  text-shadow: 0 2px 4px rgba(210, 92, 246, 0.3);
 }
 
 .contact-icon {
@@ -127,6 +128,7 @@
 
 .contact-item a {
   color: #e9ecef;
+  text-shadow: 0 2px 4px rgba(210, 92, 246, 0.3);
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -149,7 +151,7 @@
 .copyright {
   color: #94a3b8;
   font-size: 0.85rem;
-  margin: 0;
+  margin: 0 1rem 0;
 }
 
 @media (max-width: 768px) {

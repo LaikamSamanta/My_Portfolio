@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import "./Parallax.css";
 
 // randomly stars on the background
-function makeStarPositions(totalStars, width, height) {
+function makeStarPositions(totalStars, width, height, isDarkMode = false) {
   let stars = [];
 
   for (let i = 0; i < totalStars; i++) {
@@ -13,8 +13,11 @@ function makeStarPositions(totalStars, width, height) {
     // Opacity between 0.5 and 1
     let transparency = Math.random() * 0.5 + 0.5;
 
+    // Choose star color based on theme
+    let starColor = isDarkMode ? 'rgba(0, 0, 0, 0.8)' : 'rgba(255, 255, 255, 0.8)';
+
     // storing the star as a string
-    let starStr = `${starX}px ${starY}px rgba(255, 255, 255, ${transparency.toFixed(2)})`;
+    let starStr = `${starX}px ${starY}px ${starColor}`;
     stars.push(starStr);
   }
 
@@ -27,15 +30,21 @@ const Starfield = () => {
   const layerTwo = useRef(null);        // mid stars
   const thirdLayer = useRef(null);      // furthest stars
 
-  useEffect(() => {
+  const generateStars = () => {
     // Getting window size
     let winWidth = window.innerWidth;
     let winHeight = window.innerHeight * 2; // looks better
 
+    // Check if dark mode is active
+    const isDarkMode = document.body.classList.contains('dark');
+    console.log('Dark mode active:', isDarkMode); // Debug log
+
     // Generating stars for each layer separately
-    const stars1 = makeStarPositions(500, winWidth, winHeight);
-    const stars2 = makeStarPositions(300, winWidth, winHeight);
-    const stars3 = makeStarPositions(150, winWidth, winHeight);
+    const stars1 = makeStarPositions(500, winWidth, winHeight, isDarkMode);
+    const stars2 = makeStarPositions(300, winWidth, winHeight, isDarkMode);
+    const stars3 = makeStarPositions(150, winWidth, winHeight, isDarkMode);
+
+    console.log('Star color for first few stars:', stars1.split(', ').slice(0, 3)); // Debug log
 
     if (starsLayerOne.current) {
       starsLayerOne.current.style.boxShadow = stars1;
@@ -48,7 +57,22 @@ const Starfield = () => {
     if (thirdLayer.current) {
       thirdLayer.current.style.boxShadow = stars3;
     }
+  };
 
+  useEffect(() => {
+    generateStars();
+
+    // Listen for theme changes
+    const observer = new MutationObserver(() => {
+      generateStars();
+    });
+
+    observer.observe(document.body, {
+      attributes: true,
+      attributeFilter: ['class']
+    });
+
+    return () => observer.disconnect();
   }, []); 
 
   return (

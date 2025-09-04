@@ -53,13 +53,13 @@ export default function Hero() {
             </button>
             
             <div className="flex items-center gap-2 flex-shrink-0">
-              <div className="hidden sm:block w-12 h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent"></div>
-              <span className="text-sm text-gray-500 font-medium">OR</span>
-              <div className="hidden sm:block w-12 h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent"></div>
+              <div className="line hidden sm:block w-12 h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent"></div>
+              <span className="or text-sm text-gray-500 font-medium">OR</span>
+              <div className="line hidden sm:block w-12 h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent"></div>
             </div>
             
             <div className="flex flex-col sm:flex-row items-center gap-4 flex-shrink-0">
-              <span className="text-sm text-gray-600 font-medium">Follow me:</span>
+              <span className="follow-me text-sm text-gray-600 font-medium">Follow me:</span>
               <div className="flex gap-3 flex-wrap justify-center">
                 {/* GitHub */}
                 <a 

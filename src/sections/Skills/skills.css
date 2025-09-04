@@ -33,23 +33,23 @@
   transform: translateX(-50%);
   width: 60px;
   height: 3px;
-  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.7) 0%, rgba(124, 58, 237, 0.295) 100%);
   border-radius: 2px;
   box-shadow: 0 2px 8px rgba(139, 92, 246, 0.4);
 }
 
 .frontend-category .category-title::after {
-  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.7), rgba(124, 58, 237, 0.295));
   box-shadow: 0 2px 8px rgba(139, 92, 246, 0.4);
 }
 
 .backend-category .category-title::after {
-  background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.7), rgba(124, 58, 237, 0.295));
   box-shadow: 0 2px 8px rgba(124, 58, 237, 0.4);
 }
 
 .tools-category .category-title::after {
-  background: linear-gradient(135deg, #6d28d9 0%, #5b21b6 100%);
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.7), rgba(124, 58, 237, 0.295));
   box-shadow: 0 2px 8px rgba(109, 40, 217, 0.4);
 }
 
