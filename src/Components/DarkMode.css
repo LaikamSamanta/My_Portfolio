@@ -687,11 +687,11 @@ body {
 
 .dark .burger {
     background: linear-gradient(135deg, rgba(255, 0, 242, 0.9) 0%, rgba(235, 73, 253, 0.9) 100%);
-    color: #ffffff;
+    color: #000000;
     border: 2px solid rgba(255, 0, 242, 0.6);
     box-shadow: 0 4px 16px rgba(255, 0, 242, 0.3);
     font-weight: 600;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 2px 4px rgba(255, 255, 255, 0.3);
 }
 
 .dark .burger:hover {
@@ -703,11 +703,11 @@ body {
 
 .dark .download {
     background: linear-gradient(135deg, rgba(255, 0, 242, 0.9) 0%, rgba(235, 73, 253, 0.9) 100%);
-    color: #ffffff;
+    color: #000000;
     border: 2px solid rgba(255, 0, 242, 0.6);
     box-shadow: 0 4px 16px rgba(255, 0, 242, 0.3);
     font-weight: 600;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 2px 4px rgba(255, 255, 255, 0.3);
 }
 
 .dark .download:hover {
@@ -786,7 +786,7 @@ body {
 }
 
 .dark .section-text {
-  color: #202020;
+  color: #000000;
 }
 
 .dark .title-name span {
