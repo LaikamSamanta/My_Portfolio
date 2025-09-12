@@ -335,14 +335,16 @@ body {
 }
 
 .light .tech-tag {
-  background: linear-gradient(135deg, rgba(139, 92, 246, 0.7), rgba(124, 58, 237, 0.295));
+  background: linear-gradient(135deg, rgba(107, 114, 128, 0.8), rgba(75, 85, 99, 0.6));
   color: white;
-  border: 1px solid rgba(139, 92, 246, 0.3);
+  border: 1px solid rgba(107, 114, 128, 0.4);
+  box-shadow: 0 2px 8px rgba(107, 114, 128, 0.3);
 }
 
 .light .tech-tag:hover {
-  background: linear-gradient(135deg, rgba(139, 92, 246, 0.7), rgba(124, 58, 237, 0.295));
-  box-shadow: 0 2px 8px rgba(139, 92, 246, 0.3);
+  background: linear-gradient(135deg, rgba(107, 114, 128, 0.9), rgba(75, 85, 99, 0.7));
+  box-shadow: 0 4px 12px rgba(107, 114, 128, 0.4);
+  border: 1px solid rgba(107, 114, 128, 0.6);
 }
 
 .light .card-actions .btn {
@@ -973,15 +975,16 @@ body {
 }
 
 .dark .tech-tag {
-  background: rgba(246, 92, 233, 0.1);
-  color: #0a0a0a;
-  border: 1px solid rgba(246, 92, 233, 0.3);
+  background: linear-gradient(135deg, rgba(107, 114, 128, 0.8), rgba(75, 85, 99, 0.6));
+  color: white;
+  border: 1px solid rgba(107, 114, 128, 0.4);
+  box-shadow: 0 2px 8px rgba(107, 114, 128, 0.3);
 }
 
 .dark .tech-tag:hover {
-  background: rgba(246, 92, 233, 0.2);
-  border-color: rgba(246, 92, 233, 0.5);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, rgba(107, 114, 128, 0.9), rgba(75, 85, 99, 0.7));
+  box-shadow: 0 4px 12px rgba(107, 114, 128, 0.4);
+  border: 1px solid rgba(107, 114, 128, 0.6);
 }
 
 .dark .card-actions .btn {

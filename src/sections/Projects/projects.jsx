@@ -1,15 +1,81 @@
+import React, { useState, useCallback, useEffect } from "react";
 import "./projects.css";
+import ImageGallery from "../../Components/ImageGallery";
 
 export default function MyProjects() {
+  const [fullscreenModal, setFullscreenModal] = useState(null);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [savedScrollPosition, setSavedScrollPosition] = useState(0);
+
+  const openFullscreenModal = useCallback((project) => {
+    // Save current scroll position
+    setSavedScrollPosition(window.pageYOffset || document.documentElement.scrollTop);
+    setFullscreenModal(project);
+    setCurrentImageIndex(0);
+    document.body.classList.add('modal-open');
+  }, []);
+
+  const closeFullscreenModal = useCallback(() => {
+    setFullscreenModal(null);
+    setCurrentImageIndex(0);
+    document.body.classList.remove('modal-open');
+    
+    // Restore scroll position after a short delay to ensure modal is fully closed
+    setTimeout(() => {
+      window.scrollTo(0, savedScrollPosition);
+    }, 100);
+  }, [savedScrollPosition]);
+
+  const nextImage = useCallback(() => {
+    if (fullscreenModal && fullscreenModal.screenshots) {
+      setCurrentImageIndex((prevIndex) => 
+        (prevIndex + 1) % fullscreenModal.screenshots.length
+      );
+    }
+  }, [fullscreenModal]);
+
+  const prevImage = useCallback(() => {
+    if (fullscreenModal && fullscreenModal.screenshots) {
+      setCurrentImageIndex((prevIndex) => 
+        (prevIndex - 1 + fullscreenModal.screenshots.length) % fullscreenModal.screenshots.length
+      );
+    }
+  }, [fullscreenModal]);
+
+  const handleKeyDown = useCallback((e) => {
+    if (!fullscreenModal) return;
+    
+    if (e.key === 'Escape') {
+      closeFullscreenModal();
+    } else if (e.key === 'ArrowRight') {
+      nextImage();
+    } else if (e.key === 'ArrowLeft') {
+      prevImage();
+    }
+  }, [fullscreenModal, nextImage, prevImage, closeFullscreenModal]);
+
+  // Add keyboard event listener when modal is open
+  useEffect(() => {
+    if (fullscreenModal) {
+      document.addEventListener('keydown', handleKeyDown);
+      return () => document.removeEventListener('keydown', handleKeyDown);
+    }
+  }, [fullscreenModal, handleKeyDown]);
+
   const projects = [
     {
       id: 1,
       title: "Sportlandija(Blog site)",
       description: "My first website, which I built entirely from scratch with a database-backed structure, enables the administrator to manage and update videos, images, and event listings.",
-      image: "https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp",
-      tech: ["HTML", "CSS", "PHP", "SQL"],
-      icon: ["html5.png", "css3.png", "php.png", "database.png"],
-      githubUrl: "https://github.com/LaikamSamanta/Sportlandija"
+      tech: ["HTML", "CSS", "PHP", "SQL", "JavaScript"],
+      icon: ["html5.png", "css3.png", "php.png", "database.png", "javascript.png"],
+      githubUrl: "https://github.com/LaikamSamanta/Sportlandija",
+      screenshots: [
+        "/Project_Sportlandija/FireShot Capture 001 - Sportlandija - Ģimenes sporta svētki - localhost.png",
+        "/Project_Sportlandija/FireShot Webpage Capture 003 - 'Sportlandija - Ģimenes sporta svētki' - localhost.png",
+        "/Project_Sportlandija/FireShot Webpage Capture 009 - 'Administratora piekļuve - Sportlandija' - localhost.png",
+        "/Project_Sportlandija/FireShot Webpage Capture 010 - 'Sportlandija - Foto Admin' - localhost.png"
+      ]
     },
     {
       id: 2,
@@ -27,11 +93,19 @@ export default function MyProjects() {
       <div className="projects-grid">
         {projects.map((project) => (
           <div key={project.id} className="project-card">
-            <div className="card lg:card-side bg-base-100 shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div className="card bg-base-100 shadow-lg hover:shadow-xl transition-shadow duration-300">
               <figure className="project-image">
-                <img
-                  src={project.image}
-                  alt={project.title} />
+                {project.screenshots ? (
+                  <ImageGallery 
+                    images={project.screenshots} 
+                    projectTitle={project.title}
+                    isMainGallery={true}
+                  />
+                ) : (
+                  <img
+                    src={project.image}
+                    alt={project.title} />
+                )}
               </figure>
               <div className="card-body">
                 <h2 className="card-title">{project.title}</h2>
@@ -56,6 +130,24 @@ export default function MyProjects() {
                      ))}
                    </div>
                 <div className="card-actions justify-end">
+                  {project.screenshots && (
+                    <button 
+                      onClick={() => openFullscreenModal(project)}
+                      className="btn btn-primary"
+                      style={{ marginRight: '0.5rem' }}
+                    >
+                      <svg 
+                        className="fullscreen-icon" 
+                        fill="currentColor" 
+                        viewBox="0 0 24 24" 
+                        xmlns="http://www.w3.org/2000/svg"
+                        style={{ width: '16px', height: '16px', marginRight: '0.5rem' }}
+                      >
+                        <path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/>
+                      </svg>
+                      See images fullscreen
+                    </button>
+                  )}
                   <a 
                     href={project.githubUrl}
                     target="_blank"
@@ -78,6 +170,37 @@ export default function MyProjects() {
           </div>
         ))}
       </div>
+
+      {/* Fullscreen Modal */}
+      {fullscreenModal && (
+        <div className="fullscreen-modal" onClick={closeFullscreenModal}>
+          <div className="fullscreen-modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="fullscreen-close" onClick={closeFullscreenModal}>✕</button>
+            
+            {/* Navigation Arrows */}
+            <button className="fullscreen-nav fullscreen-prev" onClick={prevImage}>
+              ‹
+            </button>
+            <button className="fullscreen-nav fullscreen-next" onClick={nextImage}>
+              ›
+            </button>
+            
+            {/* Current Image */}
+            <div className="fullscreen-image-container">
+              <img 
+                src={fullscreenModal.screenshots[currentImageIndex]} 
+                alt={`${fullscreenModal.title} screenshot ${currentImageIndex + 1}`}
+                className="fullscreen-image"
+              />
+            </div>
+            
+            {/* Image Counter */}
+            <div className="fullscreen-counter">
+              {currentImageIndex + 1} / {fullscreenModal.screenshots.length}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

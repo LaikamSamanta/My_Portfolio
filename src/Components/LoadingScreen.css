@@ -363,8 +363,62 @@
   }
 }
 
-/* Responsive Design */
+/* Sparkles Responsive */
 @media (max-width: 768px) {
+  .sparkle {
+    width: 3px;
+    height: 3px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sparkle {
+    width: 2px;
+    height: 2px;
+  }
+}
+
+/* Responsive Design */
+/* Tablet and Large Mobile */
+@media (max-width: 1024px) {
+  .loading-container {
+    padding: 2rem;
+  }
+  
+  .loading-welcome {
+    font-size: 2.2rem;
+  }
+  
+  .loading-title {
+    font-size: 3.2rem;
+  }
+  
+  .loading-name {
+    font-size: 2.8rem;
+  }
+  
+  .loading-subtitle {
+    font-size: 2.2rem;
+  }
+  
+  .loading-role {
+    font-size: 1.3rem;
+  }
+  
+  .loading-progress {
+    width: 280px;
+  }
+  
+  .progress-text {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .loading-container {
+    padding: 1.5rem;
+  }
+  
   .loading-welcome {
     font-size: 2rem;
   }
@@ -388,9 +442,26 @@
   .loading-progress {
     width: 250px;
   }
+  
+  .progress-text {
+    font-size: 0.85rem;
+  }
+  
+  .loading-dots {
+    gap: 0.4rem;
+  }
+  
+  .dot {
+    width: 7px;
+    height: 7px;
+  }
 }
 
 @media (max-width: 480px) {
+  .loading-container {
+    padding: 1rem;
+  }
+  
   .loading-welcome {
     font-size: 1.5rem;
   }
@@ -413,6 +484,102 @@
   
   .loading-progress {
     width: 200px;
+  }
+  
+  .progress-text {
+    font-size: 0.8rem;
+  }
+  
+  .loading-dots {
+    gap: 0.3rem;
+  }
+  
+  .dot {
+    width: 6px;
+    height: 6px;
+  }
+}
+
+/* Extra Small Screens */
+@media (max-width: 360px) {
+  .loading-container {
+    padding: 0.75rem;
+  }
+  
+  .loading-welcome {
+    font-size: 1.2rem;
+  }
+  
+  .loading-title {
+    font-size: 2rem;
+  }
+  
+  .loading-name {
+    font-size: 1.8rem;
+  }
+  
+  .loading-subtitle {
+    font-size: 1.3rem;
+  }
+  
+  .loading-role {
+    font-size: 0.9rem;
+  }
+  
+  .loading-progress {
+    width: 180px;
+  }
+  
+  .progress-text {
+    font-size: 0.75rem;
+  }
+  
+  .loading-dots {
+    gap: 0.25rem;
+  }
+  
+  .dot {
+    width: 5px;
+    height: 5px;
+  }
+}
+
+/* Landscape Orientation */
+@media (max-height: 500px) and (orientation: landscape) {
+  .loading-container {
+    padding: 1rem 2rem;
+  }
+  
+  .loading-welcome {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .loading-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .loading-name {
+    font-size: 2rem;
+  }
+  
+  .loading-subtitle {
+    font-size: 1.5rem;
+  }
+  
+  .loading-role {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .loading-progress {
+    width: 250px;
+    margin: 1rem 0;
+  }
+  
+  .loading-animation {
+    margin-top: 1rem;
   }
 }
 
