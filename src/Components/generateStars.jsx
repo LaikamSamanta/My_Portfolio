@@ -13,8 +13,8 @@ function makeStarPositions(totalStars, width, height, isDarkMode = false) {
     // Opacity between 0.5 and 1
     let transparency = Math.random() * 0.5 + 0.5;
 
-    // Choose star color based on theme
-    let starColor = isDarkMode ? 'rgba(0, 0, 0, 0.8)' : 'rgba(255, 255, 255, 0.8)';
+    // Choose star color based on theme with random transparency
+    let starColor = isDarkMode ? `rgba(0, 0, 0, ${transparency})` : `rgba(255, 255, 255, ${transparency})`;
 
     // storing the star as a string
     let starStr = `${starX}px ${starY}px ${starColor}`;

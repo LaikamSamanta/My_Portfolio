@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Navbar from "./Components/Navbar";
 import Hero from "./sections/Hero/hero";
 import "../index.css";
@@ -7,11 +8,19 @@ import MyProjects from "./sections/Projects/projects";
 import StarField from "./Components/generateStars";
 import About from "./sections/About/about";
 import Footer from "./Components/Footer";
-import { Sparkles } from "./Components/lunarui/Sparkles"
+import { Sparkles } from "./Components/lunarui/Sparkles";
+import LoadingScreen from "./Components/LoadingScreen";
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  const handleLoadingComplete = () => {
+    setIsLoading(false);
+  };
+
   return (
     <>
+      {isLoading && <LoadingScreen onLoadingComplete={handleLoadingComplete} />}
       <StarField className="fixed top-0 left-0 right-0 w-full h-full -z-10" />
       <div className="navbar-container">
         <Navbar />
