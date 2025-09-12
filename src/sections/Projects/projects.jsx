@@ -104,7 +104,14 @@ export default function MyProjects() {
                 ) : (
                   <img
                     src={project.image}
-                    alt={project.title} />
+                    alt={project.title}
+                    loading="lazy"
+                    decoding="async"
+                    onError={(e) => {
+                      console.error(`Failed to load project image: ${project.image}`);
+                      e.target.style.display = 'none';
+                    }}
+                  />
                 )}
               </figure>
               <div className="card-body">

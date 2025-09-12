@@ -10,17 +10,33 @@
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
   width: 100%;
   max-width: 100%;
   flex: 1;
+  padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 2rem;
+    padding: 0 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 2.5rem;
+  }
 }
 
 @media (min-width: 1200px) {
   .projects-grid {
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    gap: 2.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+    gap: 3rem;
   }
 }
 
@@ -45,6 +61,7 @@
   overflow: hidden;
   background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%);
   border: 1px solid rgba(139, 92, 246, 0.2);
+  will-change: transform;
 }
 
 .project-card:hover {
@@ -63,8 +80,10 @@
 }
 
 .project-image {
-  width: 400px;
-  height: 300px;
+  width: 100%;
+  min-width: 300px;
+  max-width: 400px;
+  height: 250px;
   overflow: hidden;
   flex-shrink: 0;
   border-radius: 12px 0 0 12px;
@@ -73,6 +92,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  will-change: transform;
 }
 
 .project-image:hover {
@@ -93,14 +114,22 @@
   transform: scale(1.02);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+  
   .project-card .card {
     flex-direction: column;
   }
   
   .project-image {
     width: 100%;
-    height: 250px;
+    height: 200px;
+    min-width: unset;
+    max-width: unset;
     border-radius: 12px 12px 0 0;
   }
   
@@ -111,21 +140,32 @@
   }
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (max-width: 480px) {
+  .projects-grid {
+    padding: 0 0.5rem;
+    gap: 1rem;
+  }
+  
+  .project-image {
+    height: 180px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
   .project-image {
     width: 350px;
     height: 280px;
   }
 }
 
-@media (min-width: 1025px) and (max-width: 1200px) {
+@media (min-width: 1024px) and (max-width: 1199px) {
   .project-image {
     width: 380px;
     height: 290px;
   }
 }
 
-@media (min-width: 1201px) {
+@media (min-width: 1200px) {
   .project-image {
     width: 400px;
     height: 300px;
