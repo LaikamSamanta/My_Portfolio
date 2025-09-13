@@ -48,7 +48,7 @@ export default function Footer() {
           <div className="contact-info">
             <p className="contact-item">
               <span className="contact-icon">📧</span>
-              <a href="mailto:sbiezeka@gmail.com">samantabiezeka@gmail.com</a>
+              <a href="mailto:sbiezeka@gmail.com">sbiezeka@gmail.com</a>
             </p>
             <p className="contact-item">
               <span className="contact-icon"><img src="/Icons/latvia.png" alt="Location" className="social-icon" /></span>
