@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import Navbar from "./Components/Navbar";
 import Hero from "./sections/Hero/hero";
 import "../index.css";
@@ -86,6 +88,8 @@ function App() {
         </section>
       </div>
       <Footer />
+      <Analytics />
+      <SpeedInsights />
     </>
   );
 }
