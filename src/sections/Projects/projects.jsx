@@ -81,10 +81,15 @@ export default function MyProjects() {
       id: 2,
       title: "E-Commerce website",
       description: "An e-commerce platform with advanced features like payment processing, inventory management, and admin dashboard.",
-      image: "https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp",
       tech: ["React.js", "Laravel", "SQL"],
       icon: ["react.png", "Laravel.svg.png", "database.png"],
-      githubUrl: "https://github.com/LaikamSamanta/E-Commerce"
+      githubUrl: "https://github.com/LaikamSamanta/E-Commerce",
+      screenshots: [
+        "/Project_Ecommerce/FireShot Webpage Capture 012 - 'Vite + React' - localhost.png",
+        "/Project_Ecommerce/FireShot Webpage Capture 013 - 'Vite + React' - localhost.png",
+        "/Project_Ecommerce/FireShot Webpage Capture 014 - 'Vite + React' - localhost.png",
+        "/Project_Ecommerce/FireShot Webpage Capture 015 - 'Vite + React' - localhost.png"
+      ]
     }
   ];
 
