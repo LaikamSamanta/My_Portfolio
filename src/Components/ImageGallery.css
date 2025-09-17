@@ -19,6 +19,9 @@
   object-fit: contain;
   transition: opacity 0.3s ease, transform 0.3s ease;
   background: transparent;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
 }
 
 .main-gallery-img.loading {
@@ -40,6 +43,12 @@
   background-size: 200% 100%;
   animation: skeleton-loading 1.5s infinite;
   border-radius: 8px;
+  z-index: 1;
+}
+
+/* Dark theme skeleton */
+.dark .image-skeleton {
+  background: linear-gradient(90deg, #2a2a2a 25%, #3a3a3a 50%, #2a2a2a 75%);
 }
 
 @keyframes skeleton-loading {
@@ -149,6 +158,9 @@
   object-fit: cover;
   transition: opacity 0.3s ease, transform 0.3s ease;
   background: transparent;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
 }
 
 .gallery-image.loading {

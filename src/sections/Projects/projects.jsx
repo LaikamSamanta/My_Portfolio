@@ -203,6 +203,13 @@ export default function MyProjects() {
                 src={fullscreenModal.screenshots[currentImageIndex]} 
                 alt={`${fullscreenModal.title} screenshot ${currentImageIndex + 1}`}
                 className="fullscreen-image"
+                loading="eager"
+                decoding="async"
+                fetchpriority="high"
+                onError={(e) => {
+                  console.error(`Failed to load fullscreen image: ${fullscreenModal.screenshots[currentImageIndex]}`);
+                  e.target.style.display = 'none';
+                }}
               />
             </div>
             

@@ -1,9 +1,10 @@
-import { useState, useCallback, useMemo } from 'react';
+import { useState, useCallback, useMemo, useEffect } from 'react';
 import './ImageGallery.css';
 
 const ImageGallery = ({ images, projectTitle, isMainGallery = false }) => {
   const [mainImageIndex, setMainImageIndex] = useState(0);
   const [loadedImages, setLoadedImages] = useState(new Set());
+  const [preloadedImages, setPreloadedImages] = useState(new Set());
 
   const nextMainImage = useCallback(() => {
     setMainImageIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -16,6 +17,61 @@ const ImageGallery = ({ images, projectTitle, isMainGallery = false }) => {
   const handleImageLoad = useCallback((index) => {
     setLoadedImages(prev => new Set([...prev, index]));
   }, []);
+
+  const handleImageError = useCallback((index, imageSrc) => {
+    console.error(`Failed to load image: ${imageSrc}`);
+    setLoadedImages(prev => new Set([...prev, index])); // Mark as "loaded" to hide skeleton
+  }, []);
+
+  // Preload images for better performance
+  useEffect(() => {
+    const preloadImage = (src, index) => {
+      if (preloadedImages.has(index)) return;
+      
+      const img = new Image();
+      img.onload = () => {
+        setPreloadedImages(prev => new Set([...prev, index]));
+      };
+      img.onerror = () => {
+        console.warn(`Failed to preload image: ${src}`);
+        setPreloadedImages(prev => new Set([...prev, index])); // Mark as preloaded to avoid retries
+      };
+      img.src = src;
+    };
+
+    // Preload first 2 images immediately, others lazily
+    images.forEach((imageSrc, index) => {
+      if (index < 2) {
+        preloadImage(imageSrc, index);
+      }
+    });
+  }, [images, preloadedImages]);
+
+  // Preload next and previous images when main image changes
+  useEffect(() => {
+    if (images.length <= 1) return;
+
+    const preloadImage = (src, index) => {
+      if (preloadedImages.has(index)) return;
+      
+      const img = new Image();
+      img.onload = () => {
+        setPreloadedImages(prev => new Set([...prev, index]));
+      };
+      img.onerror = () => {
+        console.warn(`Failed to preload image: ${src}`);
+        setPreloadedImages(prev => new Set([...prev, index]));
+      };
+      img.src = src;
+    };
+
+    // Preload adjacent images
+    const nextIndex = (mainImageIndex + 1) % images.length;
+    const prevIndex = (mainImageIndex - 1 + images.length) % images.length;
+    
+    preloadImage(images[nextIndex], nextIndex);
+    preloadImage(images[prevIndex], prevIndex);
+  }, [mainImageIndex, images, preloadedImages]);
 
   const preloadNextImage = useMemo(() => {
     if (images.length <= 1) return null;
@@ -34,11 +90,9 @@ const ImageGallery = ({ images, projectTitle, isMainGallery = false }) => {
               className={`main-gallery-img ${loadedImages.has(mainImageIndex) ? 'loaded' : 'loading'}`}
               loading={mainImageIndex === 0 ? "eager" : "lazy"}
               decoding="async"
+              fetchpriority={mainImageIndex === 0 ? "high" : "auto"}
               onLoad={() => handleImageLoad(mainImageIndex)}
-              onError={(e) => {
-                console.error(`Failed to load image: ${images[mainImageIndex]}`);
-                e.target.style.display = 'none';
-              }}
+              onError={() => handleImageError(mainImageIndex, images[mainImageIndex])}
             />
             {!loadedImages.has(mainImageIndex) && (
               <div className="image-skeleton"></div>
@@ -64,6 +118,7 @@ const ImageGallery = ({ images, projectTitle, isMainGallery = false }) => {
               alt=""
               style={{ display: 'none' }}
               loading="lazy"
+              fetchpriority="low"
             />
           )}
         </div>
@@ -81,11 +136,9 @@ const ImageGallery = ({ images, projectTitle, isMainGallery = false }) => {
                   className={`gallery-image ${loadedImages.has(index) ? 'loaded' : 'loading'}`}
                   loading={index < 2 ? "eager" : "lazy"}
                   decoding="async"
+                  fetchpriority={index < 2 ? "high" : "auto"}
                   onLoad={() => handleImageLoad(index)}
-                  onError={(e) => {
-                    console.error(`Failed to load image: ${image}`);
-                    e.target.style.display = 'none';
-                  }}
+                  onError={() => handleImageError(index, image)}
                 />
                 {!loadedImages.has(index) && (
                   <div className="image-skeleton"></div>
