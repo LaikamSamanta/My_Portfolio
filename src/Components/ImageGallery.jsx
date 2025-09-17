@@ -6,6 +6,7 @@ const ImageGallery = ({ images, projectTitle, isMainGallery = false }) => {
   const [loadedImages, setLoadedImages] = useState(new Set());
   const [preloadedImages, setPreloadedImages] = useState(new Set());
 
+
   const nextMainImage = useCallback(() => {
     setMainImageIndex((prevIndex) => (prevIndex + 1) % images.length);
   }, [images.length]);
