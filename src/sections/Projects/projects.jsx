@@ -85,10 +85,10 @@ export default function MyProjects() {
       icon: ["react.png", "Laravel.svg.png", "database.png"],
       githubUrl: "https://github.com/LaikamSamanta/E-Commerce",
       screenshots: [
-        "/Project_Ecommerce/FireShot Webpage Capture 012 - 'Vite + React' - localhost.png",
-        "/Project_Ecommerce/FireShot Webpage Capture 013 - 'Vite + React' - localhost.png",
-        "/Project_Ecommerce/FireShot Webpage Capture 014 - 'Vite + React' - localhost.png",
-        "/Project_Ecommerce/FireShot Webpage Capture 015 - 'Vite + React' - localhost.png"
+        "/Project_Ecommerce/ecommerce-01.png",
+        "/Project_Ecommerce/ecommerce-02.png",
+        "/Project_Ecommerce/ecommerce-03.png",
+        "/Project_Ecommerce/ecommerce-04.png"
       ]
     }
   ];
